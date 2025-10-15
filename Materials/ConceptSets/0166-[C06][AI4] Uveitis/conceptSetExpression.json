@@ -1,0 +1,252 @@
+{
+    "items": [
+        {
+            "concept": {
+                "CONCEPT_ID": 4183040,
+                "CONCEPT_NAME": "Posterior uveitis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "43363007",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": false,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 440653,
+                "CONCEPT_NAME": "Toxoplasmosis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "187192000",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 37160817,
+                "CONCEPT_NAME": "Herpes simplex retinitis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "1163479009",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1632960000000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4224242,
+                "CONCEPT_NAME": "Herpes zoster retinitis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "421029004",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1154304000000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4330151,
+                "CONCEPT_NAME": "Cytomegaloviral retinitis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "22455005",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 434557,
+                "CONCEPT_NAME": "Tuberculosis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "56717001",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 436033,
+                "CONCEPT_NAME": "Syphilis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "76272004",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4227209,
+                "CONCEPT_NAME": "Primary intraocular non-Hodgkin malignant lymphoma",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "420788006",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1154304000000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4132792,
+                "CONCEPT_NAME": "Anterior uveitis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "410692006",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1091232000000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4218083,
+                "CONCEPT_NAME": "Episcleritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "815008",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 434944,
+                "CONCEPT_NAME": "Scleritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "78370002",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4105178,
+                "CONCEPT_NAME": "Cystoid macular edema",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "193387007",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 436403,
+                "CONCEPT_NAME": "Retinal vasculitis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "77628002",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        }
+    ]
+}
+
