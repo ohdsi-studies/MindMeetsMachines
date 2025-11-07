@@ -1,0 +1,385 @@
+{
+    "items": [
+        {
+            "concept": {
+                "CONCEPT_ID": 80809,
+                "CONCEPT_NAME": "Rheumatoid arthritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "69896004",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": false,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 40319772,
+                "CONCEPT_NAME": "Psoriatic arthritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "156370009",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1438300800000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 437082,
+                "CONCEPT_NAME": "Ankylosing spondylitis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "9631008",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 257628,
+                "CONCEPT_NAME": "Systemic lupus erythematosus",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "55464009",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 440674,
+                "CONCEPT_NAME": "Gout",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "90560007",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 439901,
+                "CONCEPT_NAME": "Chondrocalcinosis caused by pyrophosphate crystals",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "201637001",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 255348,
+                "CONCEPT_NAME": "Polymyalgia rheumatica",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "65323003",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 80180,
+                "CONCEPT_NAME": "Osteoarthritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "396275006",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1059609600000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4259507,
+                "CONCEPT_NAME": "Juvenile idiopathic arthritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "410502007",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1091232000000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4343916,
+                "CONCEPT_NAME": "Viral arthritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "239780003",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 40399768,
+                "CONCEPT_NAME": "Reactive arthritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "201736002",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1564531200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 1075205,
+                "CONCEPT_NAME": "Enteropathic arthritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "1297064001",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1709251200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 134442,
+                "CONCEPT_NAME": "Systemic sclerosis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "89155008",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 254443,
+                "CONCEPT_NAME": "Sjögren's syndrome",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "83901003",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 80182,
+                "CONCEPT_NAME": "Dermatomyositis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "396230008",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1059609600000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 80800,
+                "CONCEPT_NAME": "Polymyositis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "31384009",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4344165,
+                "CONCEPT_NAME": "Undifferentiated connective tissue disease",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "239918008",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4134867,
+                "CONCEPT_NAME": "Mixed collagen vascular disease",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "398049005",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1059609600000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4035433,
+                "CONCEPT_NAME": "Calcium pyrophosphate deposition disease",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "239832006",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        },
+        {
+            "concept": {
+                "CONCEPT_ID": 4291025,
+                "CONCEPT_NAME": "Arthritis",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_CODE": "3723001",
+                "DOMAIN_ID": "Condition",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_CLASS_ID": "Disorder",
+                "VALID_START_DATE": 1012435200000,
+                "VALID_END_DATE": 4102358400000
+            },
+            "isExcluded": true,
+            "includeDescendants": true,
+            "includeMapped": false
+        }
+    ]
+}
+
