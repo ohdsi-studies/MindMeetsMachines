@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "concept": {
+        "CONCEPT_ID": 4143972,
+        "CONCEPT_NAME": "Raynaud's phenomenon",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "266261006",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "SNOMED",
+        "CONCEPT_CLASS_ID": "Clinical Finding"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 40485046,
+        "CONCEPT_NAME": "Progressive systemic sclerosis",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "444133002",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "SNOMED",
+        "CONCEPT_CLASS_ID": "Disorder"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 134442,
+        "CONCEPT_NAME": "Systemic sclerosis",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "89155008",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "SNOMED",
+        "CONCEPT_CLASS_ID": "Disorder"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    }
+  ]
+}

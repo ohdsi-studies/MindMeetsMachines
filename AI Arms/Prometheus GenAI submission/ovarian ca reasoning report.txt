@@ -1,0 +1,1028 @@
+Generative AI
+ai-job-id:
+a2eae488-c2cd-4ea9-9ec3-384e78588abd
+ai-generation-complete-timestamp:
+10/08/2025 05:50 PM
+ai-version-info:
+ConceptSetGenerationService Version: v0.8
+ConceptSetGenerator LLM Version: Claude 3.7 Sonnet v1
+ai-prompt:
+Description: Epithelial ovarian cancer
+Ovarian carcinoma
+Fallopian tube carcinoma
+Primary peritoneal carcinoma
+High-grade serous ovarian carcinoma 
+Ovarian carcinosarcoma
+malignant Brenner tumor of ovary
+Domain: Condition
+Standard concept: S
+ai-reasoning:
+STEP 1
+
+Let's think step by step in order to extract the relevant concept parameters from the given description and concept hints.
+
+First, I'll analyze the description which mentions several types of ovarian cancer:
+- Epithelial ovarian cancer
+- Ovarian carcinoma
+- Fallopian tube carcinoma
+- Primary peritoneal carcinoma
+- High-grade serous ovarian carcinoma
+- Ovarian carcinosarcoma
+- Malignant Brenner tumor of ovary
+
+From the concept hints, I can see:
+- id: 0
+- name: "ovarian ca narrow"
+- domain: ["Condition"]
+- vocabulary: [] (empty list)
+- standard_concept: ["S"]
+- concept_class: "" (empty string)
+
+Since the description is provided, I'll use it to create keywords rather than using the concept_name. The description contains various types of ovarian cancer and related cancers, so I'll extract these as keywords.
+
+For concept_candidates, I need to generate relevant terms based on the keywords. These should include synonyms, abbreviations, and related terms for the various types of ovarian cancer mentioned.
+
+For domain, I need to match the provided domain "Condition" with the closest match from the domain list, which is "Condition".
+
+For standard_concept, vocabulary, and concept_class, I'll use the values provided in the concept hints. If they're empty, I'll leave them as empty lists.
+
+
+
+STEP 2
+
+Searching for exact matches of keywords: ['Epithelial ovarian cancer', 'Ovarian carcinoma', 'Fallopian tube carcinoma', 'Primary peritoneal carcinoma', 'High-grade serous ovarian carcinoma', 'Ovarian carcinosarcoma', 'malignant Brenner tumor of ovary'] 
+
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+1245142 | 1296848002 | Malignant Brenner tumor of ovary | Condition | SNOMED | S
+
+
+STEP 3
+
+Searching for similar concepts in vector store...
+Concept candidates: ['Epithelial ovarian cancer', 'Ovarian carcinoma', 'Ovarian cancer', 'Ovarian malignancy', 'Ovarian neoplasm malignant', 'Fallopian tube carcinoma', 'Fallopian tube cancer', 'Primary peritoneal carcinoma', 'Primary peritoneal cancer', 'High-grade serous ovarian carcinoma', 'HGSOC', 'Serous ovarian cancer', 'Ovarian carcinosarcoma', 'Malignant mixed Müllerian tumor of ovary', 'MMMT of ovary', 'Malignant Brenner tumor', 'Brenner tumor malignant']
+
+Search query: Ovarian cancer
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+37162600 | 1196879002.0 | Familial ovarian cancer | Condition | SNOMED | S
+37208178 | 461371000124103 | Recurrent ovarian cancer | Condition | SNOMED | S
+4181351 | 363443007.0 | Malignant tumor of ovary | Condition | SNOMED | S
+4047650 | 123843001.0 | Neoplasm of ovary | Condition | SNOMED | S
+36568387 | 8001/3-C56.9 | Tumor cells, malignant of ovary | Condition | ICDO3 | S
+
+Filtering reasoning:
+ determine which concepts are most relevant to "ovarian ca narrow":
+
+Concept Set Summary:
+Likely Domain: Oncology/Medical Conditions
+Key Terms: ovarian, cancer, carcinoma (ca)
+
+1. Concept ID: 37162600
+Name: "Familial ovarian cancer"
+Domain Relevance: 10/10 - Matches condition domain
+Name Relevance: 8/10 - Specific type of ovarian cancer
+Overall: 9/10
+Decision: Include - Represents a specific form of ovarian cancer
+
+2. Concept ID: 37208178
+Name: "Recurrent ovarian cancer"
+Domain Relevance: 10/10 - Matches condition domain
+Name Relevance: 8/10 - Specific type of ovarian cancer
+Overall: 9/10
+Decision: Include - Represents a specific manifestation of ovarian cancer
+
+3. Concept ID: 4181351
+Name: "Malignant tumor of ovary"
+Domain Relevance: 10/10 - Matches condition domain
+Name Relevance: 9/10 - Direct synonym for ovarian cancer
+Overall: 9.5/10
+Decision: Include - Direct match for ovarian cancer
+
+4. Concept ID: 4047650
+Name: "Neoplasm of ovary"
+Domain Relevance: 10/10 - Matches condition domain
+Name Relevance: 7/10 - Broader term that includes benign tumors
+Overall: 8.5/10
+Decision: Exclude - Too broad as it includes non-malignant neoplasms
+
+5. Concept ID: 36568387
+Name: "Tumor cells, malignant of ovary"
+Domain Relevance: 10/10 - Matches condition domain
+Name Relevance: 8/10 - Describes cellular aspect of ovarian cancer
+Overall: 9/10
+Decision: Include - Specifically refers to malignant ovarian cancer cells
+
+Final selection includes concepts that specifically relate to malignant ovarian cancer, excluding broader terms that might include benign conditions.
+--------------------
+Search query: Ovarian carcinoma
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+44501472 | 8046/3-C56.9 | Non-small cell carcinoma of ovary | Condition | ICDO3 | S
+4243893 | 92669006.0 | Carcinoma in situ of ovary | Condition | SNOMED | S
+36568387 | 8001/3-C56.9 | Tumor cells, malignant of ovary | Condition | ICDO3 | S
+4181351 | 363443007.0 | Malignant tumor of ovary | Condition | SNOMED | S
+4047650 | 123843001.0 | Neoplasm of ovary | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are most relevant to "ovarian ca narrow":
+
+Concept Set Summary:
+Likely Domain: Oncology/Condition
+Key Terms: ovarian, cancer, carcinoma (narrow/specific)
+
+1. Concept ID: 44501472
+- Name: "Non-small cell carcinoma of ovary"
+- Domain match: Perfect (10/10) - Condition
+- Name relevance: 9/10 - Specific type of ovarian carcinoma
+- Overall: 9.5/10
+- Decision: Include - Represents a specific type of ovarian carcinoma
+
+2. Concept ID: 4243893
+- Name: "Carcinoma in situ of ovary"
+- Domain match: 10/10 - Condition
+- Name relevance: 8/10 - Early/specific form of ovarian carcinoma
+- Overall: 9/10
+- Decision: Include - Specific type of ovarian carcinoma
+
+3. Concept ID: 36568387
+- Name: "Tumor cells, malignant of ovary"
+- Domain match: 10/10 - Condition
+- Name relevance: 7/10 - Describes malignant cells but less specific
+- Overall: 8.5/10
+- Decision: Exclude - Too general for "narrow" specification
+
+4. Concept ID: 4181351
+- Name: "Malignant tumor of ovary"
+- Domain match: 10/10 - Condition
+- Name relevance: 7/10 - General term for ovarian cancer
+- Overall: 8.5/10
+- Decision: Exclude - Too broad for "narrow" specification
+
+5. Concept ID: 4047650
+- Name: "Neoplasm of ovary"
+- Domain match: 10/10 - Condition
+- Name relevance: 5/10 - Most general term, includes benign
+- Overall: 7.5/10
+- Decision: Exclude - Too broad, includes non-cancerous growths
+
+Given the request for "narrow" ovarian cancer concepts, we should only include the most specific carcinoma concepts (IDs 44501472 and 4243893) that clearly define the type of carcinoma.
+--------------------
+Search query: Ovarian malignancy
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+200051 | 93934004.0 | Primary malignant neoplasm of ovary | Condition | SNOMED | S
+44499996 | 8000/9-C56.9 | Neoplasm, malignant, uncertain whether primary or metastatic of ovary | Condition | ICDO3 | S
+36568387 | 8001/3-C56.9 | Tumor cells, malignant of ovary | Condition | ICDO3 | S
+4047650 | 123843001.0 | Neoplasm of ovary | Condition | SNOMED | S
+4181351 | 363443007.0 | Malignant tumor of ovary | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "ovarian ca narrow":
+
+Concept Set Summary:
+Likely Domain: Oncology/Condition
+Key Terms: ovarian, cancer, carcinoma (ca), primary/specific cancer
+
+Analysis of each concept:
+
+1. ID: 200051
+Name: Primary malignant neoplasm of ovary
+Domain: Condition
+- Name Relevance: 10/10 - Explicitly states primary malignant neoplasm of ovary
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall: 10/10
+Decision: INCLUDE
+Justification: Perfectly matches narrow definition of primary ovarian cancer
+
+2. ID: 44499996
+Name: Neoplasm, malignant, uncertain whether primary or metastatic of ovary
+Domain: Condition
+- Name Relevance: 5/10 - Includes uncertainty about primary vs metastatic
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall: 7.5/10
+Decision: EXCLUDE
+Justification: Too broad/uncertain for "narrow" specification
+
+3. ID: 36568387
+Name: Tumor cells, malignant of ovary
+Domain: Condition
+- Name Relevance: 7/10 - Describes malignant cells but not full cancer diagnosis
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall: 8.5/10
+Decision: EXCLUDE
+Justification: Describes cellular finding rather than definitive cancer diagnosis
+
+4. ID: 4047650
+Name: Neoplasm of ovary
+Domain: Condition
+- Name Relevance: 3/10 - Too broad, doesn't specify malignancy
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall: 6.5/10
+Decision: EXCLUDE
+Justification: Too broad, includes benign neoplasms
+
+5. ID: 4181351
+Name: Malignant tumor of ovary
+Domain: Condition
+- Name Relevance: 9/10 - Clearly indicates malignant ovarian tumor
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall: 9.5/10
+Decision: INCLUDE
+Justification: Specifically indicates malignant ovarian tumor
+
+Final selection includes only the most specific and clearly malignant ovarian cancer concepts (200051, 4181351) that best match a narrow definition.
+--------------------
+Search query: Ovarian neoplasm malignant
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+36568387 | 8001/3-C56.9 | Tumor cells, malignant of ovary | Condition | ICDO3 | S
+44499996 | 8000/9-C56.9 | Neoplasm, malignant, uncertain whether primary or metastatic of ovary | Condition | ICDO3 | S
+200051 | 93934004.0 | Primary malignant neoplasm of ovary | Condition | SNOMED | S
+4181351 | 363443007.0 | Malignant tumor of ovary | Condition | SNOMED | S
+4047650 | 123843001.0 | Neoplasm of ovary | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are specifically related to ovarian cancer (narrow definition):
+
+Concept Set Summary:
+Likely Domain: Oncology/Cancer
+Key Terms: ovarian, cancer, malignant, narrow (suggesting specific/precise definition)
+
+Analysis of each concept:
+
+1. ID: 36568387
+Concept Name: "Tumor cells, malignant of ovary"
+Domain: Condition
+Name Relevance: 8/10 - Directly references malignant cells in ovary
+Domain Relevance: 10/10 - Matches oncological condition
+Overall Score: 9/10
+Decision: Include
+Justification: Specifically describes malignant cells in ovary, matching narrow definition
+
+2. ID: 44499996
+Concept Name: "Neoplasm, malignant, uncertain whether primary or metastatic of ovary"
+Domain: Condition
+Name Relevance: 5/10 - Includes uncertainty about origin
+Domain Relevance: 10/10 - Matches oncological condition
+Overall Score: 7.5/10
+Decision: Exclude
+Justification: Uncertainty about primary vs metastatic doesn't fit "narrow" definition
+
+3. ID: 200051
+Concept Name: "Primary malignant neoplasm of ovary"
+Domain: Condition
+Name Relevance: 10/10 - Specifically identifies primary ovarian cancer
+Domain Relevance: 10/10 - Matches oncological condition
+Overall Score: 10/10
+Decision: Include
+Justification: Perfect match for narrow definition of ovarian cancer
+
+4. ID: 4181351
+Concept Name: "Malignant tumor of ovary"
+Domain: Condition
+Name Relevance: 9/10 - Directly specifies malignant ovarian tumor
+Domain Relevance: 10/10 - Matches oncological condition
+Overall Score: 9.5/10
+Decision: Include
+Justification: Clear specification of malignant ovarian tumor
+
+5. ID: 4047650
+Concept Name: "Neoplasm of ovary"
+Domain: Condition
+Name Relevance: 5/10 - Too broad, doesn't specify malignancy
+Domain Relevance: 10/10 - Matches oncological condition
+Overall Score: 7.5/10
+Decision: Exclude
+Justification: Too broad for "narrow" definition as it includes non-malignant neoplasms
+
+Final Selection Validation:
+- Included concepts (36568387, 200051, 4181351) all specifically reference malignant ovarian cancer
+- Excluded concepts either have uncertainty about origin or are too broad
+- Selected concepts align with narrow definition requirement
+--------------------
+Search query: Epithelial ovarian cancer
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+36541361 | 8011/3-C56.9 | Epithelioma, malignant of ovary | Condition | ICDO3 | S
+4301886 | 78607009.0 | Epithelial ovarian tumor, FIGO stage II | Condition | SNOMED | S
+4300057 | 78199001.0 | Epithelial ovarian tumor, FIGO stage IIC | Condition | SNOMED | S
+4116073 | 254849005.0 | Malignant epithelial tumor of ovary | Condition | SNOMED | S
+4034004 | 237057005.0 | Epithelial tumor of ovary | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "ovarian ca narrow":
+
+Concept Set Summary:
+Likely Domain: Oncology/Condition
+Key Terms: ovarian, cancer, carcinoma (ca), narrow/specific
+
+Analysis of each concept:
+
+1. Concept ID: 36541361
+Concept Name: Epithelioma, malignant of ovary
+Domain: Condition
+- Name Relevance: 9/10 (Epithelioma is a type of malignant epithelial tumor, directly related to ovarian cancer)
+- Domain Relevance: 10/10 (Matches medical condition domain)
+Decision: Include
+Justification: Specific type of ovarian cancer, matches narrow focus
+
+2. Concept ID: 4301886
+Concept Name: Epithelial ovarian tumor, FIGO stage II
+Domain: Condition
+- Name Relevance: 9/10 (Specific staging of ovarian cancer)
+- Domain Relevance: 10/10 (Matches medical condition domain)
+Decision: Include
+Justification: Specific staging indicates narrow definition
+
+3. Concept ID: 4300057
+Concept Name: Epithelial ovarian tumor, FIGO stage IIC
+Domain: Condition
+- Name Relevance: 9/10 (Very specific staging of ovarian cancer)
+- Domain Relevance: 10/10 (Matches medical condition domain)
+Decision: Include
+Justification: Highly specific staging matches narrow focus
+
+4. Concept ID: 4116073
+Concept Name: Malignant epithelial tumor of ovary
+Domain: Condition
+- Name Relevance: 9/10 (Directly describes ovarian cancer)
+- Domain Relevance: 10/10 (Matches medical condition domain)
+Decision: Include
+Justification: Specific type of ovarian cancer
+
+5. Concept ID: 4034004
+Concept Name: Epithelial tumor of ovary
+Domain: Condition
+- Name Relevance: 6/10 (Describes ovarian tumor but not specifically malignant)
+- Domain Relevance: 10/10 (Matches medical condition domain)
+Decision: Exclude
+Justification: Too broad as it doesn't specify malignancy, which is essential for cancer definition
+
+Final validation:
+- All included concepts specifically relate to malignant/cancerous ovarian conditions
+- Excluded concept is too broad as it doesn't specify malignancy
+- All concepts are from appropriate medical domain
+--------------------
+Search query: Fallopian tube carcinoma
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+4130533 | 126916003.0 | Neoplasm of fallopian tube | Condition | SNOMED | S
+4178969 | 363444001.0 | Malignant tumor of fallopian tube | Condition | SNOMED | S
+4243876 | 92591008.0 | Carcinoma in situ of fallopian tube | Condition | SNOMED | S
+37166191 | 1259320001.0 | Primary carcinoma of fallopian tube | Condition | SNOMED | S
+4174891 | 276870001.0 | Carcinoma of fallopian tube | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to ovarian cancer (narrow definition):
+
+Concept Set Summary:
+Likely Domain: Condition/Oncology
+Key Terms: ovarian, cancer, carcinoma, malignant neoplasm
+
+Analysis of each concept:
+
+1. Concept ID: 4130533
+Concept Name: Neoplasm of fallopian tube
+Domain: Condition
+Relevance of Name: 2/10 - Too broad and not specific to ovarian cancer
+Relevance of Domain: 8/10 - Correct medical domain
+Overall Score: 5/10
+Decision: Exclude - While in reproductive system, not specific to ovary or cancer
+
+2. Concept ID: 4178969
+Concept Name: Malignant tumor of fallopian tube
+Domain: Condition
+Relevance of Name: 3/10 - Specifies malignancy but wrong anatomical location
+Relevance of Domain: 8/10 - Correct medical domain
+Overall Score: 5.5/10
+Decision: Exclude - Not specific to ovary
+
+3. Concept ID: 4243876
+Concept Name: Carcinoma in situ of fallopian tube
+Domain: Condition
+Relevance of Name: 2/10 - Wrong anatomical location and pre-invasive only
+Relevance of Domain: 8/10 - Correct medical domain
+Overall Score: 5/10
+Decision: Exclude - Not ovarian and not fully developed cancer
+
+4. Concept ID: 37166191
+Concept Name: Primary carcinoma of fallopian tube
+Domain: Condition
+Relevance of Name: 3/10 - Wrong anatomical location though specific cancer
+Relevance of Domain: 8/10 - Correct medical domain
+Overall Score: 5.5/10
+Decision: Exclude - Specifically about fallopian tube, not ovary
+
+5. Concept ID: 4174891
+Concept Name: Carcinoma of fallopian tube
+Domain: Condition
+Relevance of Name: 3/10 - Wrong anatomical location
+Relevance of Domain: 8/10 - Correct medical domain
+Overall Score: 5.5/10
+Decision: Exclude - Not specific to ovary
+
+Final Decision:
+None of the concepts should be included because they all relate to fallopian tube cancer rather than ovarian cancer. For a narrow definition of ovarian cancer, we need concepts that specifically mention ovarian cancer or malignancies of the ovary. These concepts, while related to the female reproductive system, are anatomically distinct from ovarian cancer.
+--------------------
+Search query: HGSOC
+No results found.
+--------------------
+Search query: Fallopian tube cancer
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+4178969 | 363444001.0 | Malignant tumor of fallopian tube | Condition | SNOMED | S
+36568064 | 8001/3-C57.0 | Tumor cells, malignant of fallopian tube | Condition | ICDO3 | S
+4130533 | 126916003.0 | Neoplasm of fallopian tube | Condition | SNOMED | S
+37166191 | 1259320001.0 | Primary carcinoma of fallopian tube | Condition | SNOMED | S
+4174891 | 276870001.0 | Carcinoma of fallopian tube | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "ovarian ca narrow":
+
+Concept Set Summary:
+Likely Domain: Oncology/Gynecology
+Key Terms: ovarian, cancer, carcinoma (ca)
+
+Analysis of each concept:
+
+1. Concept ID: 4178969
+Concept Name: Malignant tumor of fallopian tube
+Domain: Condition
+Relevance of Name: 2/10 - While in gynecologic system, fallopian tube is distinct from ovary
+Relevance of Domain: 8/10 - Correct medical condition domain
+Decision: Exclude - Specifically refers to fallopian tube, not ovarian cancer
+
+2. Concept ID: 36568064
+Concept Name: Tumor cells, malignant of fallopian tube
+Domain: Condition
+Relevance of Name: 2/10 - Refers to fallopian tube malignancy, not ovarian
+Relevance of Domain: 8/10 - Correct medical condition domain
+Decision: Exclude - Specifically about fallopian tube malignancy
+
+3. Concept ID: 4130533
+Concept Name: Neoplasm of fallopian tube
+Domain: Condition
+Relevance of Name: 1/10 - Generic neoplasm term, specific to fallopian tube
+Relevance of Domain: 8/10 - Correct medical condition domain
+Decision: Exclude - Too broad (neoplasm) and wrong location (fallopian tube)
+
+4. Concept ID: 37166191
+Concept Name: Primary carcinoma of fallopian tube
+Domain: Condition
+Relevance of Name: 2/10 - While carcinoma matches, location is fallopian tube
+Relevance of Domain: 8/10 - Correct medical condition domain
+Decision: Exclude - Specifically about primary fallopian tube cancer
+
+5. Concept ID: 4174891
+Concept Name: Carcinoma of fallopian tube
+Domain: Condition
+Relevance of Name: 2/10 - While carcinoma matches, location is fallopian tube
+Relevance of Domain: 8/10 - Correct medical condition domain
+Decision: Exclude - Specifically about fallopian tube carcinoma
+
+Final Decision:
+None of the concepts should be included as they all specifically refer to fallopian tube cancers/neoplasms, while the concept set is looking for ovarian cancer specifically. The anatomical location difference is significant enough to exclude all concepts.
+--------------------
+Search query: Primary peritoneal cancer
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+4311496 | 93952004.0 | Primary malignant neoplasm of pelvic peritoneum | Condition | SNOMED | S
+4246140 | 93947009.0 | Primary malignant neoplasm of parietal peritoneum | Condition | SNOMED | S
+40486562 | 447781009.0 | Carcinoma of peritoneum | Condition | SNOMED | S
+197799 | 372016004.0 | Primary malignant neoplasm of the peritoneum | Condition | SNOMED | S
+36715933 | 721725005.0 | Primary adenocarcinoma of peritoneum | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to ovarian cancer (narrow definition):
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: ovarian, cancer, carcinoma, malignant neoplasm (specifically of ovary)
+
+Analysis of each concept:
+
+1. Concept ID: 4311496
+Name: Primary malignant neoplasm of pelvic peritoneum
+Domain: Condition
+Name Relevance: 3/10 - While in pelvic region, not specific to ovary
+Domain Relevance: 8/10 - Correct disease type domain
+Decision: Exclude - Too broad and not ovary-specific
+
+2. Concept ID: 4246140
+Name: Primary malignant neoplasm of parietal peritoneum
+Domain: Condition
+Name Relevance: 2/10 - Not specific to ovary
+Domain Relevance: 8/10 - Correct disease type domain
+Decision: Exclude - Not ovary-specific
+
+3. Concept ID: 40486562
+Name: Carcinoma of peritoneum
+Domain: Condition
+Name Relevance: 2/10 - Generic peritoneal cancer
+Domain Relevance: 8/10 - Correct disease type domain
+Decision: Exclude - Too broad and not ovary-specific
+
+4. Concept ID: 197799
+Name: Primary malignant neoplasm of the peritoneum
+Domain: Condition
+Name Relevance: 2/10 - Generic peritoneal cancer
+Domain Relevance: 8/10 - Correct disease type domain
+Decision: Exclude - Too broad and not ovary-specific
+
+5. Concept ID: 36715933
+Name: Primary adenocarcinoma of peritoneum
+Domain: Condition
+Name Relevance: 2/10 - Not specific to ovary
+Domain Relevance: 8/10 - Correct disease type domain
+Decision: Exclude - Not ovary-specific
+
+Final Decision:
+Given that we're looking for a narrow definition of ovarian cancer, none of these concepts should be included. While they are all related to cancers in the pelvic/peritoneal region, none specifically mention or relate to ovarian cancer. For a narrow definition, we need concepts that explicitly relate to ovarian cancer.
+--------------------
+Search query: Primary peritoneal carcinoma
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+37396737 | 716649003.0 | Extraovarian primary peritoneal carcinoma | Condition | SNOMED | S
+4246140 | 93947009.0 | Primary malignant neoplasm of parietal peritoneum | Condition | SNOMED | S
+40486562 | 447781009.0 | Carcinoma of peritoneum | Condition | SNOMED | S
+197799 | 372016004.0 | Primary malignant neoplasm of the peritoneum | Condition | SNOMED | S
+36715933 | 721725005.0 | Primary adenocarcinoma of peritoneum | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "ovarian ca narrow":
+
+Concept Set Summary:
+Likely Domain: Oncology/Condition
+Key Terms: ovarian, cancer, carcinoma (ca)
+
+Analysis of each concept:
+
+1. Concept ID: 37396737
+Name: Extraovarian primary peritoneal carcinoma
+Domain: Condition
+- Name Relevance: 7/10 - While this is a carcinoma, it's specifically extraovarian
+- Domain Relevance: 10/10 - Matches oncological condition
+Decision: Exclude - While related, "extraovarian" specifically indicates outside ovary
+Edge Case: Though sometimes treated similarly to ovarian cancer, it's distinct by definition
+
+2. Concept ID: 4246140
+Name: Primary malignant neoplasm of parietal peritoneum
+Domain: Condition
+- Name Relevance: 4/10 - Peritoneal rather than ovarian
+- Domain Relevance: 10/10 - Oncological condition
+Decision: Exclude - Not specific to ovarian cancer
+
+3. Concept ID: 40486562
+Name: Carcinoma of peritoneum
+Domain: Condition
+- Name Relevance: 3/10 - Peritoneal not ovarian
+- Domain Relevance: 10/10 - Oncological condition
+Decision: Exclude - Too broad and not ovarian-specific
+
+4. Concept ID: 197799
+Name: Primary malignant neoplasm of the peritoneum
+Domain: Condition
+- Name Relevance: 4/10 - Peritoneal rather than ovarian
+- Domain Relevance: 10/10 - Oncological condition
+Decision: Exclude - Not specific to ovarian cancer
+
+5. Concept ID: 36715933
+Name: Primary adenocarcinoma of peritoneum
+Domain: Condition
+- Name Relevance: 4/10 - Peritoneal rather than ovarian
+- Domain Relevance: 10/10 - Oncological condition
+Decision: Exclude - Not specific to ovarian cancer
+
+Final Decision:
+Given that we're looking for a narrow definition of ovarian cancer ("ovarian ca narrow"), none of these concepts should be included as they all refer to peritoneal rather than ovarian cancers. While these conditions may be related to ovarian cancer, they are distinct entities and including them would violate the "narrow" specification of the concept set.
+--------------------
+Search query: High-grade serous ovarian carcinoma
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+44499443 | 8441/3-C56.9 | Serous carcinoma, NOS, of ovary | Condition | ICDO3 | S
+42513319 | 8461/3-NULL | Neoplasm defined only by histology: High grade serous carcinoma | Condition | ICDO3 | S
+44502239 | 8461/3-C54.9 | High grade serous carcinoma of corpus uteri | Condition | ICDO3 | S
+36532447 | 8461/3-C54.3 | High grade serous carcinoma of fundus uteri | Condition | ICDO3 | S
+36716618 | 722685004.0 | Primary high grade serous adenocarcinoma of ovary | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are specifically related to ovarian cancer with a narrow focus:
+
+Concept Set Summary:
+Likely Domain: Oncology/Gynecology
+Key Terms: ovarian, cancer, carcinoma (ca)
+
+Analysis of each concept:
+
+1. ID: 44499443
+Concept Name: Serous carcinoma, NOS, of ovary
+Domain: Condition
+Relevance of Name: 9/10 - Directly mentions ovary and carcinoma
+Relevance of Domain: 10/10 - Condition matches oncological condition
+Decision: Include
+Justification: Specifically mentions ovarian carcinoma
+
+2. ID: 42513319
+Concept Name: Neoplasm defined only by histology: High grade serous carcinoma
+Domain: Condition
+Relevance of Name: 5/10 - Mentions carcinoma but not specific to ovary
+Relevance of Domain: 10/10 - Condition matches oncological condition
+Decision: Exclude
+Justification: Too general, not specific to ovarian cancer
+
+3. ID: 44502239
+Concept Name: High grade serous carcinoma of corpus uteri
+Domain: Condition
+Relevance of Name: 2/10 - Different anatomical location (uterus)
+Relevance of Domain: 10/10 - Condition matches oncological condition
+Decision: Exclude
+Justification: Refers to uterine not ovarian cancer
+
+4. ID: 36532447
+Concept Name: High grade serous carcinoma of fundus uteri
+Domain: Condition
+Relevance of Name: 2/10 - Different anatomical location (uterus)
+Relevance of Domain: 10/10 - Condition matches oncological condition
+Decision: Exclude
+Justification: Refers to uterine not ovarian cancer
+
+5. ID: 36716618
+Concept Name: Primary high grade serous adenocarcinoma of ovary
+Domain: Condition
+Relevance of Name: 10/10 - Specifically mentions primary ovarian cancer
+Relevance of Domain: 10/10 - Condition matches oncological condition
+Decision: Include
+Justification: Very specific to ovarian cancer and includes grade information
+
+Final Selection Rationale:
+Including only concepts 44499443 and 36716618 as they specifically refer to ovarian carcinoma. Other concepts, while related to similar types of cancer, are either too general or refer to different anatomical locations.
+--------------------
+Search query: Serous ovarian cancer
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+4307986 | 423627007.0 | Sarcoma of ovary | Condition | SNOMED | S
+36717228 | 722684000.0 | Primary low grade serous adenocarcinoma of ovary | Condition | SNOMED | S
+36549054 | 8230/3-C56.9 | Solid carcinoma, NOS, of ovary | Condition | ICDO3 | S
+36716618 | 722685004.0 | Primary high grade serous adenocarcinoma of ovary | Condition | SNOMED | S
+44499443 | 8441/3-C56.9 | Serous carcinoma, NOS, of ovary | Condition | ICDO3 | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "ovarian ca narrow":
+
+Concept Set Summary:
+Likely Domain: Oncology/Condition
+Key Terms: ovarian, cancer, carcinoma (ca)
+
+1. Concept ID: 4307986
+- Name: Sarcoma of ovary
+- Domain match: 10/10 (Condition)
+- Name relevance: 3/10 - Sarcoma is a different type of cancer than carcinoma
+- Overall: 6.5/10
+- Decision: Exclude - Sarcoma is a distinct type of cancer from carcinoma
+
+2. Concept ID: 36717228
+- Name: Primary low grade serous adenocarcinoma of ovary
+- Domain match: 10/10 (Condition)
+- Name relevance: 10/10 - Specific type of ovarian carcinoma
+- Overall: 10/10
+- Decision: Include - Represents a specific type of ovarian carcinoma
+
+3. Concept ID: 36549054
+- Name: Solid carcinoma, NOS, of ovary
+- Domain match: 10/10 (Condition)
+- Name relevance: 9/10 - Specific type of ovarian carcinoma
+- Overall: 9.5/10
+- Decision: Include - Represents a type of ovarian carcinoma
+
+4. Concept ID: 36716618
+- Name: Primary high grade serous adenocarcinoma of ovary
+- Domain match: 10/10 (Condition)
+- Name relevance: 10/10 - Specific type of ovarian carcinoma
+- Overall: 10/10
+- Decision: Include - Represents a specific type of ovarian carcinoma
+
+5. Concept ID: 44499443
+- Name: Serous carcinoma, NOS, of ovary
+- Domain match: 10/10 (Condition)
+- Name relevance: 10/10 - Specific type of ovarian carcinoma
+- Overall: 10/10
+- Decision: Include - Represents a type of ovarian carcinoma
+
+Final selection includes all specific types of ovarian carcinoma but excludes sarcoma as it's a different type of cancer.
+--------------------
+Search query: Ovarian carcinosarcoma
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+36687125 | 15930941000119108 | Carcinosarcoma of bilateral ovaries | Condition | SNOMED | S
+36687123 | 15930861000119100 | Carcinosarcoma of left ovary | Condition | SNOMED | S
+36687124 | 15930901000119106 | Carcinosarcoma of right ovary | Condition | SNOMED | S
+37167583 | 1268526001.0 | Primary carcinosarcoma of ovary | Condition | SNOMED | S
+45765433 | 702368000.0 | Carcinosarcoma of ovary | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "ovarian ca narrow":
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: ovarian, cancer, narrow (suggesting a specific/precise definition)
+
+Analysis for each concept:
+
+1. Concept ID: 36687125
+Name: Carcinosarcoma of bilateral ovaries
+Domain: Condition
+- Name Relevance: 9/10 - Carcinosarcoma is a specific type of ovarian cancer
+- Domain Relevance: 10/10 - Matches medical condition domain
+- Overall: 9.5/10
+Decision: Include - This is a specific type of ovarian cancer
+
+2. Concept ID: 36687123
+Name: Carcinosarcoma of left ovary
+Domain: Condition
+- Name Relevance: 9/10 - Specific unilateral ovarian cancer
+- Domain Relevance: 10/10 - Matches medical condition domain
+- Overall: 9.5/10
+Decision: Include - Represents a specific ovarian cancer type
+
+3. Concept ID: 36687124
+Name: Carcinosarcoma of right ovary
+Domain: Condition
+- Name Relevance: 9/10 - Specific unilateral ovarian cancer
+- Domain Relevance: 10/10 - Matches medical condition domain
+- Overall: 9.5/10
+Decision: Include - Represents a specific ovarian cancer type
+
+4. Concept ID: 37167583
+Name: Primary carcinosarcoma of ovary
+Domain: Condition
+- Name Relevance: 10/10 - Specifically indicates primary ovarian cancer
+- Domain Relevance: 10/10 - Matches medical condition domain
+- Overall: 10/10
+Decision: Include - Primary ovarian cancer specification
+
+5. Concept ID: 45765433
+Name: Carcinosarcoma of ovary
+Domain: Condition
+- Name Relevance: 9/10 - General ovarian carcinosarcoma
+- Domain Relevance: 10/10 - Matches medical condition domain
+- Overall: 9.5/10
+Decision: Include - General form of the condition
+
+All concepts are highly relevant as they represent specific types of ovarian cancer (carcinosarcoma), which aligns with the narrow/specific focus requested in the concept set name. The terms are all within the same domain (Condition) and represent variations of the same specific cancer type.
+--------------------
+Search query: Malignant mixed Müllerian tumor of ovary
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+44502558 | 8950/3-C53.9 | Mullerian mixed tumor of cervix uteri | Condition | ICDO3 | S
+44502298 | 8950/3-C54.2 | Mullerian mixed tumor of myometrium | Condition | ICDO3 | S
+36564663 | 8950/3-C57.7 | Mullerian mixed tumor of other specified parts of female genital organs | Condition | ICDO3 | S
+36402466 | 8950/1-C56.9 | Mullerian mixed tumor,uncertain behaviour of ovary | Condition | ICDO3 | S
+44502729 | 8950/3-C56.9 | Mullerian mixed tumor of ovary | Condition | ICDO3 | S
+
+Filtering reasoning:
+ determine which concepts are relevant to ovarian cancer (narrow definition):
+
+Concept Set Summary:
+Likely Domain: Condition/Cancer
+Key Terms: ovarian, cancer, ovary, malignant
+
+Analysis of each concept:
+
+1. Concept ID: 44502558
+Name: Mullerian mixed tumor of cervix uteri
+Domain: Condition
+Relevance of Name: 2/10 - While it's a gynecologic tumor, it's specifically cervical not ovarian
+Relevance of Domain: 8/10 - Correct domain for cancers
+Decision: Exclude - Wrong anatomical location
+
+2. Concept ID: 44502298
+Name: Mullerian mixed tumor of myometrium
+Domain: Condition
+Relevance of Name: 2/10 - Uterine location, not ovarian
+Relevance of Domain: 8/10 - Correct domain for cancers
+Decision: Exclude - Wrong anatomical location
+
+3. Concept ID: 36564663
+Name: Mullerian mixed tumor of other specified parts of female genital organs
+Domain: Condition
+Relevance of Name: 3/10 - Too broad and non-specific to ovary
+Relevance of Domain: 8/10 - Correct domain for cancers
+Decision: Exclude - Too broad and not ovary-specific
+
+4. Concept ID: 36402466
+Name: Mullerian mixed tumor,uncertain behaviour of ovary
+Domain: Condition
+Relevance of Name: 7/10 - Involves ovary but uncertain behavior
+Relevance of Domain: 8/10 - Correct domain for cancers
+Decision: Exclude - "Uncertain behaviour" doesn't fit narrow definition of cancer
+
+5. Concept ID: 44502729
+Name: Mullerian mixed tumor of ovary
+Domain: Condition
+Relevance of Name: 9/10 - Specifically ovarian tumor
+Relevance of Domain: 8/10 - Correct domain for cancers
+Decision: Include - Matches anatomical location and represents a malignant tumor
+
+Final Decision:
+Only including concept 44502729 as it specifically represents an ovarian malignancy. Other concepts are either in different anatomical locations or don't clearly indicate malignancy. For a narrow definition of ovarian cancer, we want to be specific to ovarian malignancies.
+--------------------
+Search query: Malignant Brenner tumor
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+36553407 | 9000/1-C56.9 | Brenner tumor, borderline malignancy of ovary | Condition | ICDO3 | S
+42513630 | 9000/1-NULL | Neoplasm defined only by histology: Brenner tumor, borderline malignancy | Condition | ICDO3 | S
+1245142 | 1296848002.0 | Malignant Brenner tumor of ovary | Condition | SNOMED | S
+44501034 | 9000/3-C56.9 | Brenner tumor, malignant of ovary | Condition | ICDO3 | S
+42513631 | 9000/3-NULL | Neoplasm defined only by histology: Brenner tumor, malignant | Condition | ICDO3 | S
+
+Filtering reasoning:
+ determine which concepts are relevant to ovarian cancer (narrow definition):
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: ovarian, cancer, malignant, narrow (suggesting specific/confirmed cases)
+
+Analysis of each concept:
+
+1. Concept ID: 36553407
+Concept Name: Brenner tumor, borderline malignancy of ovary
+Domain: Condition
+Name Relevance: 5/10 - While ovarian-related, borderline malignancy doesn't meet narrow cancer definition
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Exclude - Borderline malignancy doesn't qualify for narrow cancer definition
+
+2. Concept ID: 42513630
+Concept Name: Neoplasm defined only by histology: Brenner tumor, borderline malignancy
+Domain: Condition
+Name Relevance: 3/10 - Less specific to ovary, borderline malignancy
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Exclude - Too broad and borderline malignancy
+
+3. Concept ID: 1245142
+Concept Name: Malignant Brenner tumor of ovary
+Domain: Condition
+Name Relevance: 9/10 - Specifically mentions malignant and ovary
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include - Clearly indicates malignant ovarian cancer
+
+4. Concept ID: 44501034
+Concept Name: Brenner tumor, malignant of ovary
+Domain: Condition
+Name Relevance: 9/10 - Specifically mentions malignant and ovary
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include - Clearly indicates malignant ovarian cancer
+
+5. Concept ID: 42513631
+Concept Name: Neoplasm defined only by histology: Brenner tumor, malignant
+Domain: Condition
+Name Relevance: 4/10 - Mentions malignant but not ovary-specific
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Exclude - Not specifically ovarian
+
+For a narrow definition of ovarian cancer, we should only include concepts that are:
+1. Specifically related to ovary
+2. Clearly malignant (not borderline)
+3. Definitively diagnosed
+
+Therefore, only concepts 1245142 and 44501034 meet these criteria as they specifically mention both malignant and ovary.
+--------------------
+Search query: Brenner tumor malignant
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+1245142 | 1296848002.0 | Malignant Brenner tumor of ovary | Condition | SNOMED | S
+36553407 | 9000/1-C56.9 | Brenner tumor, borderline malignancy of ovary | Condition | ICDO3 | S
+42513630 | 9000/1-NULL | Neoplasm defined only by histology: Brenner tumor, borderline malignancy | Condition | ICDO3 | S
+42513631 | 9000/3-NULL | Neoplasm defined only by histology: Brenner tumor, malignant | Condition | ICDO3 | S
+44501034 | 9000/3-C56.9 | Brenner tumor, malignant of ovary | Condition | ICDO3 | S
+
+Filtering reasoning:
+ determine which concepts are relevant to ovarian cancer (narrow definition):
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: ovarian, cancer, malignant, narrow (suggesting specific/confirmed cases)
+
+Analysis of each concept:
+
+1. Concept ID: 1245142
+Concept Name: Malignant Brenner tumor of ovary
+Domain: Condition
+Relevance of Name: 10/10 - Explicitly malignant and ovarian
+Relevance of Domain: 10/10 - Matches disease domain
+Overall Score: 10/10
+Decision: Include
+Justification: Clearly describes a malignant ovarian tumor
+
+2. Concept ID: 36553407
+Concept Name: Brenner tumor, borderline malignancy of ovary
+Domain: Condition
+Relevance of Name: 5/10 - Borderline malignancy not definitive cancer
+Relevance of Domain: 10/10 - Matches disease domain
+Overall Score: 7.5/10
+Decision: Exclude
+Justification: "Narrow" definition suggests focusing on definitive cancer cases
+
+3. Concept ID: 42513630
+Concept Name: Neoplasm defined only by histology: Brenner tumor, borderline malignancy
+Domain: Condition
+Relevance of Name: 3/10 - Borderline and not specifically ovarian
+Relevance of Domain: 10/10 - Matches disease domain
+Overall Score: 6.5/10
+Decision: Exclude
+Justification: Not specifically ovarian and borderline malignancy
+
+4. Concept ID: 42513631
+Concept Name: Neoplasm defined only by histology: Brenner tumor, malignant
+Domain: Condition
+Relevance of Name: 7/10 - Malignant but not specifically ovarian
+Relevance of Domain: 10/10 - Matches disease domain
+Overall Score: 8.5/10
+Decision: Exclude
+Justification: Though malignant, lacks specific ovarian location
+
+5. Concept ID: 44501034
+Concept Name: Brenner tumor, malignant of ovary
+Domain: Condition
+Relevance of Name: 10/10 - Explicitly malignant and ovarian
+Relevance of Domain: 10/10 - Matches disease domain
+Overall Score: 10/10
+Decision: Include
+Justification: Clearly describes a malignant ovarian tumor
+
+Final Validation:
+- Selected concepts are specifically malignant ovarian tumors
+- Excluded borderline cases and non-specific locations
+- Matches narrow definition requirement
+--------------------
+Search query: MMMT of ovary
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+36529965 | 9100/0-C56.9 | Hydatidiform mole, NOS, of ovary | Condition | ICDO3 | S
+4128192 | 289837004.0 | Small ovary | Condition | SNOMED | S
+4129485 | 289848006.0 | Ovary problem | Condition | SNOMED | S
+44502729 | 8950/3-C56.9 | Mullerian mixed tumor of ovary | Condition | ICDO3 | S
+36402466 | 8950/1-C56.9 | Mullerian mixed tumor,uncertain behaviour of ovary | Condition | ICDO3 | S
+
+Filtering reasoning:
+ determine which concepts are relevant to ovarian cancer (narrow definition):
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: ovarian cancer, ovarian carcinoma, malignant ovarian tumor
+
+Analysis of each concept:
+
+1. Concept ID: 36529965
+Concept Name: Hydatidiform mole, NOS, of ovary
+Domain: Condition
+- While this is an ovarian condition, a hydatidiform mole is a non-cancerous growth
+Name Relevance: 3/10 - Involves ovary but not cancer
+Domain Relevance: 8/10 - Correct organ system/condition domain
+Overall: 5.5/10
+Decision: Exclude - Not a cancer diagnosis
+
+2. Concept ID: 4128192
+Concept Name: Small ovary
+Domain: Condition
+- This is a descriptive finding, not a cancer diagnosis
+Name Relevance: 2/10 - Only mentions ovary
+Domain Relevance: 8/10 - Correct organ system
+Overall: 5/10
+Decision: Exclude - Not related to cancer
+
+3. Concept ID: 4129485
+Concept Name: Ovary problem
+Domain: Condition
+- Too general/vague, not specific to cancer
+Name Relevance: 1/10 - Very general term
+Domain Relevance: 8/10 - Correct organ system
+Overall: 4.5/10
+Decision: Exclude - Too broad, not cancer-specific
+
+4. Concept ID: 44502729
+Concept Name: Mullerian mixed tumor of ovary
+Domain: Condition
+- This is a type of ovarian cancer (malignant mixed Mullerian tumor/carcinosarcoma)
+Name Relevance: 9/10 - Specific type of ovarian cancer
+Domain Relevance: 10/10 - Exact domain match
+Overall: 9.5/10
+Decision: Include - Represents a specific type of ovarian cancer
+
+5. Concept ID: 36402466
+Concept Name: Mullerian mixed tumor,uncertain behaviour of ovary
+Domain: Condition
+- While related to Mullerian tumors, the "uncertain behaviour" specification makes it less definitive for a narrow cancer definition
+Name Relevance: 6/10 - Similar to cancer but uncertain
+Domain Relevance: 8/10 - Correct organ system
+Overall: 7/10
+Decision: Exclude - Does not meet narrow cancer definition due to uncertain behavior specification
+
+After careful analysis, only concept ID 44502729 (Mullerian mixed tumor of ovary) meets the strict criteria for ovarian cancer. The others are either non-cancerous conditions, too vague, or of uncertain malignant potential.
+--------------------
+
+
+STEP 4
+
+Merging results and removing dupliates...
+Done. 

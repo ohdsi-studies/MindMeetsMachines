@@ -1,0 +1,381 @@
+Generative AI
+ai-job-id:
+f8befd96-5b1d-48b5-9e1c-1f7f77cfc02b
+ai-generation-complete-timestamp:
+10/08/2025 05:22 PM
+ai-version-info:
+ConceptSetGenerationService Version: v0.8
+ConceptSetGenerator LLM Version: Claude 3.7 Sonnet v1
+ai-prompt:
+Description: Diabetic macular edema DME 
+Domain: Condition
+Vocabulary: SNOMED
+Standard concept: S
+ai-reasoning:
+STEP 1
+
+Let's think step by step in order to extract the concept parameters from the given information.
+
+First, I'll analyze the description and concept hints:
+
+1. Description: "Diabetic macular edema DME"
+   - This describes a specific eye condition called diabetic macular edema (DME)
+   - DME is a complication of diabetes that affects the macula (central part of the retina)
+
+2. Concept Hints:
+   - id: 0
+   - name: "DMA narrow"
+   - domain: ["Condition"]
+   - vocabulary: ["SNOMED"]
+   - standard_concept: ["S"]
+   - concept_class: "" (empty string)
+
+3. Domain List:
+   - The provided domain "Condition" is already in the valid domain list, so no mapping needed
+
+Now, I'll extract the parameters:
+
+For keywords:
+- Since a description is provided ("Diabetic macular edema DME"), I should use this for keywords rather than the concept name
+- Keywords: ["Diabetic macular edema", "DME"]
+
+For concept_candidates:
+- Based on the keywords, I need to generate relevant candidates
+- "Diabetic macular edema" and its abbreviation "DME" are the main terms
+- I should include synonyms and related terms
+
+For the remaining fields:
+- standard_concept: ["S"] (as specified in concept_hints)
+- vocabulary: ["SNOMED"] (as specified in concept_hints)
+- concept_class: [] (empty list since concept_class was provided as an empty string)
+- domain: ["Condition"] (as specified in concept_hints)
+
+The concept name "DMA narrow" seems to be an abbreviation or shorthand for diabetic macular edema with a narrow specification. I'll include this in my analysis but prioritize the description for keywords.
+
+
+
+STEP 2
+
+Searching for exact matches of keywords: ['Diabetic macular edema', 'DME'] 
+
+No exact match found. Will continue with vector search.
+
+
+STEP 3
+
+Searching for similar concepts in vector store...
+Concept candidates: ['Diabetic macular edema', 'DME', 'Macular edema due to diabetes mellitus', 'Diabetic retinopathy with macular edema', 'Macular edema', 'Diabetic maculopathy', 'Retinal edema', 'Macular swelling due to diabetes']
+
+Search query: DME
+No results found.
+--------------------
+Search query: Macular edema
+No results found.
+--------------------
+Search query: Diabetic macular edema
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+45770831 | 97341000119105 | Proliferative retinopathy with retinal edema due to type 2 diabetes mellitus | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine if the concept is relevant to DMA (Diabetic Macular Angiopathy) narrow definition:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DMA, Diabetic Macular Angiopathy, diabetic retinal conditions
+
+Concept Analysis:
+ID: 45770831
+Name: Proliferative retinopathy with retinal edema due to type 2 diabetes mellitus
+Domain: Condition
+
+Synonyms/Related Terms:
+- For Concept Set: diabetic macular angiopathy, diabetic retinopathy with macular involvement
+- For Concept: PDR with edema, diabetic retinal edema, proliferative diabetic retinopathy
+
+Relevance of Name: 8/10 
+- The concept directly relates to diabetic retinal conditions
+- Includes both proliferative retinopathy and retinal edema
+- Specifically mentions diabetes as the cause
+
+Relevance of Domain: 10/10
+- Condition domain matches perfectly with the disease/condition nature of DMA
+
+Overall Relevance Score: 9/10
+
+Decision: Include
+Justification: This concept represents a severe form of diabetic retinopathy with retinal edema, which is closely related to diabetic macular angiopathy. The presence of retinal edema in a diabetic context strongly suggests macular involvement, making this concept relevant to a narrow DMA definition.
+
+Edge Case Considerations:
+- While the concept doesn't explicitly mention "macular" in its name, the presence of retinal edema in diabetes typically involves the macula
+- The specification of Type 2 diabetes doesn't limit its relevance as DMA can occur in any type of diabetes
+--------------------
+Search query: Diabetic retinopathy with macular edema
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+35626071 | 769221001.0 | Clinically significant macular edema of right eye due to diabetes mellitus | Condition | SNOMED | S
+35626764 | 770097006.0 | Clinically significant macular edema due to diabetes mellitus | Condition | SNOMED | S
+35626067 | 769217008.0 | Macular edema of right eye due to diabetes mellitus | Condition | SNOMED | S
+380097 | 312912001.0 | Macular edema due to diabetes mellitus | Condition | SNOMED | S
+45770830 | 97331000119101 | Macular edema and retinopathy due to type 2 diabetes mellitus | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "DMA narrow" (Diabetic Macular edema - narrow definition):
+
+Concept Set Summary:
+Likely Domain: Ophthalmological/Diabetic Conditions
+Key Terms: diabetic macular edema, DMA, macular edema, diabetes
+
+Analysis of each concept:
+
+1. Concept ID: 35626071
+Name Relevance: 9/10 - Specifically mentions macular edema with diabetes, includes "clinically significant"
+Domain Relevance: 10/10 - Condition domain is appropriate
+Decision: Include - Represents a specific, clinically significant form of DMA
+
+2. Concept ID: 35626764
+Name Relevance: 9/10 - Mentions clinically significant macular edema with diabetes
+Domain Relevance: 10/10 - Condition domain matches
+Decision: Include - Represents the general form of clinically significant DMA
+
+3. Concept ID: 35626067
+Name Relevance: 8/10 - Mentions macular edema with diabetes
+Domain Relevance: 10/10 - Condition domain matches
+Decision: Include - Represents a specific form of DMA
+
+4. Concept ID: 380097
+Name Relevance: 8/10 - Direct match for macular edema due to diabetes
+Domain Relevance: 10/10 - Condition domain matches
+Decision: Include - Represents the general form of DMA
+
+5. Concept ID: 45770830
+Name Relevance: 8/10 - Includes both macular edema and retinopathy
+Domain Relevance: 10/10 - Condition domain matches
+Decision: Include - Though it includes retinopathy, it's still relevant to DMA
+
+Since we're looking for a narrow definition, all these concepts are relevant as they specifically mention macular edema due to diabetes mellitus, with some being more specific (clinically significant, laterality) than others. The presence of "clinically significant" in some concepts actually helps narrow the definition to more severe cases.
+--------------------
+Search query: Macular edema due to diabetes mellitus
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+35626068 | 769218003.0 | Macular edema of left eye due to diabetes mellitus | Condition | SNOMED | S
+35626070 | 769220000.0 | Macular edema due to type 2 diabetes mellitus | Condition | SNOMED | S
+35626067 | 769217008.0 | Macular edema of right eye due to diabetes mellitus | Condition | SNOMED | S
+35626764 | 770097006.0 | Clinically significant macular edema due to diabetes mellitus | Condition | SNOMED | S
+380097 | 312912001.0 | Macular edema due to diabetes mellitus | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to DMA (Diabetic Macular edema) narrow definition:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DMA, diabetic macular edema, narrow definition
+
+Analysis of each concept:
+
+1. Concept ID: 35626068
+Name: Macular edema of left eye due to diabetes mellitus
+Domain Match: 10/10 (Condition)
+Relevance: 8/10 - Specifies laterality (left eye), which may be too specific for a narrow definition
+Decision: Exclude - Too specific for narrow definition
+
+2. Concept ID: 35626070
+Name: Macular edema due to type 2 diabetes mellitus
+Domain Match: 10/10 (Condition)
+Relevance: 8/10 - Specifies diabetes type, which may be too specific
+Decision: Exclude - Too specific for narrow definition
+
+3. Concept ID: 35626067
+Name: Macular edema of right eye due to diabetes mellitus
+Domain Match: 10/10 (Condition)
+Relevance: 8/10 - Specifies laterality (right eye), which may be too specific
+Decision: Exclude - Too specific for narrow definition
+
+4. Concept ID: 35626764
+Name: Clinically significant macular edema due to diabetes mellitus
+Domain Match: 10/10 (Condition)
+Relevance: 9/10 - Adds clinical significance qualifier
+Decision: Exclude - Additional qualifier makes it too specific
+
+5. Concept ID: 380097
+Name: Macular edema due to diabetes mellitus
+Domain Match: 10/10 (Condition)
+Relevance: 10/10 - Perfect match for narrow definition
+Decision: Include - This is the most general form that captures the core concept without additional qualifiers
+
+For a narrow definition, we want the most general form that captures the essential concept without additional qualifiers or specifications. Therefore, only concept ID 380097 should be included as it represents the base condition without additional specificity about laterality, diabetes type, or clinical significance.
+--------------------
+Search query: Retinal edema
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+37108888 | 15639131000119107 | Macular edema of retina of right eye | Condition | SNOMED | S
+4087153 | 248506002.0 | Widespread retinal edema | Condition | SNOMED | S
+4182393 | 54388004.0 | Peripheral retinal edema | Condition | SNOMED | S
+4154456 | 28391008.0 | Localized retinal edema | Condition | SNOMED | S
+372903 | 6141006.0 | Retinal edema | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "DMA narrow":
+
+Concept Set Summary:
+Likely Domain: Ophthalmology/Eye Conditions
+Key Terms: DMA (likely referring to Diabetic Macular Area/Diabetic Macular Assessment)
+
+Analysis of each concept:
+
+1. Concept ID: 37108888
+Concept Name: Macular edema of retina of right eye
+Domain: Condition
+Relevance of Name: 8/10 - Directly relates to macular area
+Relevance of Domain: 10/10 - Eye condition
+Overall Score: 9/10
+Decision: Include
+Justification: Specifically mentions macular area, which is key for DMA assessment
+
+2. Concept ID: 4087153
+Concept Name: Widespread retinal edema
+Domain: Condition
+Relevance of Name: 4/10 - Too broad, not specific to macular area
+Relevance of Domain: 10/10 - Eye condition
+Overall Score: 7/10
+Decision: Exclude
+Justification: Not specific to macular area, too widespread
+
+3. Concept ID: 4182393
+Concept Name: Peripheral retinal edema
+Domain: Condition
+Relevance of Name: 2/10 - Peripheral location contradicts macular focus
+Relevance of Domain: 10/10 - Eye condition
+Overall Score: 6/10
+Decision: Exclude
+Justification: Peripheral location is opposite of macular area
+
+4. Concept ID: 4154456
+Concept Name: Localized retinal edema
+Domain: Condition
+Relevance of Name: 6/10 - Localized but not specific to macula
+Relevance of Domain: 10/10 - Eye condition
+Overall Score: 8/10
+Decision: Include
+Justification: Localized nature aligns with "narrow" specification
+
+5. Concept ID: 372903
+Concept Name: Retinal edema
+Domain: Condition
+Relevance of Name: 3/10 - Too general, not specific to macular area
+Relevance of Domain: 10/10 - Eye condition
+Overall Score: 6.5/10
+Decision: Exclude
+Justification: Too general for "narrow" specification
+
+Final Selection:
+Including only concepts that specifically relate to macular area or localized edema, which aligns with "DMA narrow" focus. This results in including IDs 37108888 (macular specific) and 4154456 (localized).
+--------------------
+Search query: Macular swelling due to diabetes
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+441868 | 248487006.0 | Optic disc swelling | Condition | SNOMED | S
+4318380 | 95352005.0 | Mucous membrane swelling | Condition | SNOMED | S
+761649 | 15742921000119108 | Swelling of structure of left eye | Condition | SNOMED | S
+761650 | 15742961000119103 | Swelling of structure of right eye | Condition | SNOMED | S
+4149858 | 267041004.0 | Swelling around eyes | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "DMA narrow":
+
+Concept Set Summary:
+Likely Domain: Ophthalmology/Neurology
+Key Terms: DMA (likely referring to Dural Margin Analysis or similar ophthalmic/neurological assessment)
+
+Analysis of each concept:
+
+1. Concept ID: 441868
+Concept Name: Optic disc swelling
+Domain: Condition
+Relevance of Name: 9/10 - Optic disc swelling is highly relevant to dural margin analysis as it's a key finding
+Relevance of Domain: 10/10 - Condition is appropriate for this finding
+Decision: Include
+Justification: Optic disc swelling is directly related to DMA assessment
+
+2. Concept ID: 4318380
+Concept Name: Mucous membrane swelling
+Domain: Condition
+Relevance of Name: 1/10 - Not related to optic disc or dural margins
+Relevance of Domain: 5/10 - While it's a condition, it's not relevant to DMA
+Decision: Exclude
+Justification: Mucous membrane swelling is unrelated to DMA
+
+3-5. Concept IDs: 761649, 761650, 4149858
+Names: Swelling of structure of left/right eye, Swelling around eyes
+Domain: Condition
+Relevance of Name: 3/10 - Too general, not specific to optic disc or dural margins
+Relevance of Domain: 5/10 - While they are conditions, they're too general
+Decision: Exclude
+Justification: These concepts describe general eye swelling, not specific to dural margins or optic disc
+
+After careful analysis, only concept 441868 (Optic disc swelling) is directly relevant to DMA narrow, as it specifically relates to the optic disc, which is crucial for dural margin analysis. The other concepts are either too general (eye swelling) or completely unrelated (mucous membrane).
+--------------------
+Search query: Diabetic maculopathy
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+35626087 | 769244003.0 | Disorder of right macula due to diabetes mellitus | Condition | SNOMED | S
+35626088 | 769245002.0 | Disorder of left macula due to diabetes mellitus | Condition | SNOMED | S
+4334884 | 232020009.0 | Disorder of macula due to diabetes mellitus | Condition | SNOMED | S
+4210874 | 314014002.0 | Ischemic maculopathy due to diabetes mellitus | Condition | SNOMED | S
+4105173 | 193350004.0 | Advanced maculopathy due to diabetes mellitus | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to DMA (Diabetic Macular Abnormality) narrow definition:
+
+Concept Set Summary:
+Likely Domain: Ophthalmological/Diabetic Conditions
+Key Terms: DMA, diabetic macular abnormality, diabetic maculopathy
+
+Analysis of each concept:
+
+1. Concept ID: 35626087
+Name: Disorder of right macula due to diabetes mellitus
+Domain: Condition
+Name Relevance: 8/10 - Explicitly mentions macular disorder and diabetes
+Domain Relevance: 10/10 - Matches perfectly with condition domain
+Decision: Exclude - Too specific (laterality specified) for narrow definition
+
+2. Concept ID: 35626088
+Name: Disorder of left macula due to diabetes mellitus
+Domain: Condition
+Name Relevance: 8/10 - Explicitly mentions macular disorder and diabetes
+Domain Relevance: 10/10 - Matches perfectly with condition domain
+Decision: Exclude - Too specific (laterality specified) for narrow definition
+
+3. Concept ID: 4334884
+Name: Disorder of macula due to diabetes mellitus
+Domain: Condition
+Name Relevance: 10/10 - Perfect match for diabetic macular abnormality
+Domain Relevance: 10/10 - Matches perfectly with condition domain
+Decision: Include - This is the core concept without laterality specification
+
+4. Concept ID: 4210874
+Name: Ischemic maculopathy due to diabetes mellitus
+Domain: Condition
+Name Relevance: 7/10 - Specific type of diabetic maculopathy
+Domain Relevance: 10/10 - Matches perfectly with condition domain
+Decision: Include - Represents a specific form of DMA
+
+5. Concept ID: 4105173
+Name: Advanced maculopathy due to diabetes mellitus
+Domain: Condition
+Name Relevance: 7/10 - Specific stage of diabetic maculopathy
+Domain Relevance: 10/10 - Matches perfectly with condition domain
+Decision: Include - Represents a severity stage of DMA
+
+Final Selection Rationale:
+- Included concepts 4334884, 4210874, and 4105173 as they represent the core concept and important subtypes
+- Excluded laterality-specific concepts (35626087, 35626088) as they are too specific for a narrow definition
+- All included concepts directly relate to diabetic macular conditions without unnecessary specificity
+--------------------
+
+
+STEP 4
+
+Merging results and removing dupliates...
+Done. 

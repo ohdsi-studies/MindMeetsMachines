@@ -1,0 +1,140 @@
+{
+  "items": [
+    {
+      "concept": {
+        "CONCEPT_ID": 35208828,
+        "CONCEPT_NAME": "Progressive systemic sclerosis",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M34.0",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 35208830,
+        "CONCEPT_NAME": "Systemic sclerosis induced by drug and chemical",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M34.2",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45572448,
+        "CONCEPT_NAME": "Other systemic sclerosis",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M34.89",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1570620,
+        "CONCEPT_NAME": "Other forms of systemic sclerosis",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M34.8",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 35208702,
+        "CONCEPT_NAME": "Localized scleroderma [morphea]",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "L94.0",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 35208703,
+        "CONCEPT_NAME": "Linear scleroderma",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "L94.1",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45582130,
+        "CONCEPT_NAME": "Systemic sclerosis with polyneuropathy",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M34.83",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45596565,
+        "CONCEPT_NAME": "Systemic sclerosis with lung involvement",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M34.81",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    }
+  ]
+}
