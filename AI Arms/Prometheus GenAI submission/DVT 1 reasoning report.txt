@@ -1,0 +1,557 @@
+Generative AI
+ai-job-id:
+b415af63-2f38-4cd0-b0fd-d1adf17ffa58
+ai-generation-complete-timestamp:
+10/08/2025 05:40 PM
+ai-version-info:
+ConceptSetGenerationService Version: v0.8
+ConceptSetGenerator LLM Version: Claude 3.7 Sonnet v1
+ai-prompt:
+Description: Proximal lower-extremity DVT
+Iliofemoral DVT
+Femoral vein thrombosis
+Popliteal vein thrombosis
+Iliac vein thrombosis
+Lower-limb DVT proximal
+Domain: Condition
+Standard concept: S
+ai-reasoning:
+STEP 1
+
+extract the concept parameters from the given description and concept hints. 
+
+First, let's analyze what we have:
+
+1. Description: The description mentions various types of proximal lower-extremity deep vein thrombosis (DVT), specifically:
+   - Proximal lower-extremity DVT
+   - Iliofemoral DVT
+   - Femoral vein thrombosis
+   - Popliteal vein thrombosis
+   - Iliac vein thrombosis
+   - Lower-limb DVT proximal
+
+2. Concept Hints:
+   - id: 0
+   - name: "DVT narrow"
+   - domain: ["Condition"]
+   - vocabulary: [] (empty list)
+   - standard_concept: ["S"]
+   - concept_class: "" (empty string)
+
+3. Domain List: A list of valid domains is provided, and "Condition" is one of them.
+
+Now, let's extract the parameters:
+
+1. id: 0 (from concept_hints)
+2. concept_name: "DVT narrow" (from concept_hints)
+3. keywords: Since description is provided, I'll extract keywords from it rather than the concept_name. The keywords should capture the main terms from the description:
+   ["Proximal lower-extremity DVT", "Iliofemoral DVT", "Femoral vein thrombosis", "Popliteal vein thrombosis", "Iliac vein thrombosis", "Lower-limb DVT proximal"]
+
+4. concept_candidates: Based on the keywords, I'll generate relevant candidates:
+   - "Deep vein thrombosis"
+   - "DVT"
+   - "Proximal DVT"
+   - "Lower extremity DVT"
+   - "Iliofemoral thrombosis"
+   - "Femoral vein thrombosis"
+   - "Popliteal vein thrombosis"
+   - "Iliac vein thrombosis"
+   - "Proximal lower limb thrombosis"
+   - "Venous thrombosis of lower limb"
+
+5. standard_concept: ["S"] (from concept_hints)
+6. vocabulary: [] (empty list from concept_hints)
+7. concept_class: [] (empty list since concept_class was an empty string in concept_hints)
+8. domain: ["Condition"] (from concept_hints, which matches one of the valid domains)
+
+
+
+STEP 2
+
+Searching for exact matches of keywords: ['Proximal lower-extremity DVT', 'Iliofemoral DVT', 'Femoral vein thrombosis', 'Popliteal vein thrombosis', 'Iliac vein thrombosis', 'Lower-limb DVT proximal'] 
+
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+3185768 | 8340001000004107 | Popliteal vein thrombosis | Condition | Nebraska Lexicon | S
+
+
+STEP 3
+
+Searching for similar concepts in vector store...
+Concept candidates: ['Deep vein thrombosis', 'DVT', 'Proximal DVT', 'Lower extremity DVT', 'Iliofemoral thrombosis', 'Femoral vein thrombosis', 'Popliteal vein thrombosis', 'Iliac vein thrombosis', 'Proximal lower limb thrombosis', 'Venous thrombosis of lower limb']
+
+Search query: DVT
+No results found.
+--------------------
+Search query: Lower extremity DVT
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+44782735 | 132141000119106 | Chronic deep venous thrombosis of lower extremity | Condition | SNOMED | S
+4189293 | 373408007.0 | Vascular disorder of lower extremity | Condition | SNOMED | S
+763942 | 448841000124100 | Deep venous thrombosis of left lower extremity | Condition | SNOMED | S
+443537 | 404223003.0 | Deep venous thrombosis of lower extremity | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to DVT (Deep Vein Thrombosis) with a narrow definition:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DVT, Deep Vein Thrombosis, narrow specification
+
+Analysis of each concept:
+
+1. Concept ID: 44782735
+Concept Name: Chronic deep venous thrombosis of lower extremity
+Domain: Condition
+Relevance of Name: 9/10 - Explicitly mentions DVT with specific chronicity
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: Specific form of DVT that fits narrow definition
+
+2. Concept ID: 4189293
+Concept Name: Vascular disorder of lower extremity
+Domain: Condition
+Relevance of Name: 3/10 - Too broad, doesn't specify thrombosis
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Exclude
+Justification: Too general for narrow DVT definition
+
+3. Concept ID: 763942
+Concept Name: Deep venous thrombosis of left lower extremity
+Domain: Condition
+Relevance of Name: 10/10 - Explicit DVT with specific laterality
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: Specific DVT diagnosis that fits narrow definition
+
+4. Concept ID: 443537
+Concept Name: Deep venous thrombosis of lower extremity
+Domain: Condition
+Relevance of Name: 10/10 - Explicit DVT diagnosis
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: Clear DVT diagnosis that fits narrow definition
+
+Final validation:
+- All included concepts explicitly mention DVT
+- Excluded concept is too broad for narrow definition
+- All IDs verified against original search results
+--------------------
+Search query: Proximal DVT
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+4093037 | 249740005.0 | Proximal shortening of arm | Condition | SNOMED | S
+4093678 | 249939004.0 | Proximal muscle weakness | Condition | SNOMED | S
+4092577 | 249790009.0 | Proximal shortening of leg | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to DVT (Deep Vein Thrombosis) narrow definition:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DVT, Deep Vein Thrombosis, blood clot, venous thrombosis
+
+Analysis of each concept:
+
+1. Concept ID: 4093037
+Concept Name: Proximal shortening of arm
+Concept Domain: Condition
+Relevance of Name: 0/10 - No relation to blood clots or thrombosis
+Relevance of Domain: 5/10 - While both are conditions, this is an anatomical/structural issue
+Overall Score: 2.5/10
+Decision: Exclude
+Justification: This describes a physical deformity of the arm, not related to blood clots
+
+2. Concept ID: 4093678
+Concept Name: Proximal muscle weakness
+Concept Domain: Condition
+Relevance of Name: 0/10 - Describes muscle weakness, not vascular condition
+Relevance of Domain: 5/10 - Both are conditions but different systems
+Overall Score: 2.5/10
+Decision: Exclude
+Justification: This is a neuromuscular condition, not related to DVT
+
+3. Concept ID: 4092577
+Concept Name: Proximal shortening of leg
+Concept Domain: Condition
+Relevance of Name: 0/10 - Describes structural leg issue, not vascular
+Relevance of Domain: 5/10 - Both are conditions but different types
+Overall Score: 2.5/10
+Decision: Exclude
+Justification: This describes a physical deformity of the leg, not related to DVT
+
+Final Validation:
+- None of these concepts relate to DVT or venous thrombosis
+- All concepts describe different types of conditions unrelated to blood clots
+- No relevant concepts were found in the search results
+--------------------
+Search query: Iliac vein thrombosis
+No results found.
+--------------------
+Search query: Femoral vein thrombosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+765540 | 285391000119101 | Acute deep venous thrombosis of left femoral vein | Condition | SNOMED | S
+44782739 | 132191000119103 | Chronic deep venous thrombosis of femoral vein | Condition | SNOMED | S
+44782747 | 132291000119106 | Acute deep venous thrombosis of femoral vein | Condition | SNOMED | S
+4175569 | 297149007.0 | Common femoral artery thrombosis | Condition | SNOMED | S
+4178609 | 52156004.0 | Femoral artery thrombosis | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to DVT (Deep Vein Thrombosis) with a narrow definition:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DVT, deep vein thrombosis, venous
+
+Analysis of each concept:
+
+1. Concept ID: 765540
+Name: Acute deep venous thrombosis of left femoral vein
+Domain: Condition
+Relevance of Name: 10/10 - Explicitly mentions DVT with specific location
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: INCLUDE
+Justification: Perfect match for DVT with specific venous location
+
+2. Concept ID: 44782739
+Name: Chronic deep venous thrombosis of femoral vein
+Domain: Condition
+Relevance of Name: 10/10 - Explicitly mentions DVT with specific location
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: INCLUDE
+Justification: Clear DVT case, though chronic
+
+3. Concept ID: 44782747
+Name: Acute deep venous thrombosis of femoral vein
+Domain: Condition
+Relevance of Name: 10/10 - Explicitly mentions DVT with specific location
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: INCLUDE
+Justification: Clear DVT case, acute presentation
+
+4. Concept ID: 4175569
+Name: Common femoral artery thrombosis
+Domain: Condition
+Relevance of Name: 2/10 - Arterial not venous thrombosis
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: EXCLUDE
+Justification: Arterial thrombosis is distinct from DVT (venous)
+
+5. Concept ID: 4178609
+Name: Femoral artery thrombosis
+Domain: Condition
+Relevance of Name: 2/10 - Arterial not venous thrombosis
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: EXCLUDE
+Justification: Arterial thrombosis is distinct from DVT (venous)
+
+Final validation:
+- Included concepts (765540, 44782739, 44782747) all represent true DVT cases
+- Excluded concepts (4175569, 4178609) are arterial thromboses, not DVT
+- For a narrow definition, focusing only on clear venous thrombosis cases is appropriate
+--------------------
+Search query: Iliofemoral thrombosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+765541 | 285461000119103 | Acute deep venous thrombosis of ileofemoral vein of right lower extremity | Condition | SNOMED | S
+762015 | 285451000119100 | Acute deep venous thrombosis of ileofemoral vein of left leg | Condition | SNOMED | S
+765543 | 285481000119107 | Chronic deep venous thrombosis of left ileofemoral vein | Condition | SNOMED | S
+44782740 | 132201000119100 | Chronic deep venous thrombosis of iliofemoral vein | Condition | SNOMED | S
+4119760 | 234044007.0 | Iliofemoral deep vein thrombosis | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to DVT (Deep Vein Thrombosis) with a narrow definition:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DVT, Deep Vein Thrombosis, narrow specification
+
+Analysis of each concept:
+
+1. Concept ID: 765541
+Name: Acute deep venous thrombosis of ileofemoral vein of right lower extremity
+Domain: Condition
+Relevance of Name: 10/10 - Explicitly mentions acute DVT with specific location
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: Specific acute DVT diagnosis with anatomical precision
+
+2. Concept ID: 762015
+Name: Acute deep venous thrombosis of ileofemoral vein of left leg
+Domain: Condition
+Relevance of Name: 10/10 - Explicitly mentions acute DVT with specific location
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: Specific acute DVT diagnosis with anatomical precision
+
+3. Concept ID: 765543
+Name: Chronic deep venous thrombosis of left ileofemoral vein
+Domain: Condition
+Relevance of Name: 8/10 - Mentions DVT but chronic form
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Exclude
+Justification: Chronic form doesn't fit narrow acute DVT definition
+
+4. Concept ID: 44782740
+Name: Chronic deep venous thrombosis of iliofemoral vein
+Domain: Condition
+Relevance of Name: 8/10 - Mentions DVT but chronic form
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Exclude
+Justification: Chronic form doesn't fit narrow acute DVT definition
+
+5. Concept ID: 4119760
+Name: Iliofemoral deep vein thrombosis
+Domain: Condition
+Relevance of Name: 9/10 - Mentions DVT without specifying acute/chronic
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: General DVT term that fits narrow definition without chronic specification
+
+Final Selection Rationale:
+For a narrow DVT definition, we include acute cases and the general DVT term, but exclude chronic cases to maintain specificity. Selected concepts provide precise anatomical location (ileofemoral) and represent active/acute DVT cases.
+--------------------
+Search query: Popliteal vein thrombosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+44782736 | 132151000119108 | Chronic deep venous thrombosis of popliteal vein | Condition | SNOMED | S
+44782743 | 132251000119101 | Acute deep venous thrombosis of popliteal vein | Condition | SNOMED | S
+4337367 | 87239004.0 | Popliteal artery thrombosis | Condition | SNOMED | S
+4175649 | 427776007.0 | Thrombosis of the popliteal vein | Condition | SNOMED | S
+3185768 | 8340001000004107 | Popliteal vein thrombosis | Condition | Nebraska Lexicon | S
+
+Filtering reasoning:
+ determine which concepts are relevant to DVT (Deep Vein Thrombosis) in a narrow sense:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DVT, Deep Vein Thrombosis, venous thrombosis
+
+Analysis of each concept:
+
+1. Concept ID: 44782736
+Name: Chronic deep venous thrombosis of popliteal vein
+Domain: Condition
+Relevance of Name: 10/10 - Explicitly mentions DVT with specific vein
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: Direct match for DVT with specific location
+
+2. Concept ID: 44782743
+Name: Acute deep venous thrombosis of popliteal vein
+Domain: Condition
+Relevance of Name: 10/10 - Explicitly mentions DVT with specific vein
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: Direct match for DVT with specific location
+
+3. Concept ID: 4337367
+Name: Popliteal artery thrombosis
+Domain: Condition
+Relevance of Name: 3/10 - Arterial not venous thrombosis
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Exclude
+Justification: Arterial thrombosis is different from DVT (venous)
+
+4. Concept ID: 4175649
+Name: Thrombosis of the popliteal vein
+Domain: Condition
+Relevance of Name: 10/10 - Describes DVT in different wording
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: Synonymous with DVT of popliteal vein
+
+5. Concept ID: 3185768
+Name: Popliteal vein thrombosis
+Domain: Condition
+Relevance of Name: 10/10 - Describes DVT in different wording
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include
+Justification: Synonymous with DVT of popliteal vein
+
+Final validation:
+- All included concepts specifically refer to venous thrombosis
+- Excluded arterial thrombosis as it's not DVT
+- All included concepts are specific to popliteal vein DVT
+- IDs have been verified against original search results
+--------------------
+Search query: Deep vein thrombosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+46271900 | 710167004.0 | Recurrent deep vein thrombosis | Condition | SNOMED | S
+36712971 | 15760351000119105 | Chronic deep venous thrombosis | Condition | SNOMED | S
+3174315 | 30950001000004102 | Chronic deep vein thromboses | Condition | Nebraska Lexicon | S
+44782746 | 132281000119108 | Acute deep venous thrombosis | Condition | SNOMED | S
+4133004 | 128053003.0 | Deep venous thrombosis | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "DVT narrow":
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DVT, Deep Vein Thrombosis, Deep Venous Thrombosis
+
+Analysis of each concept:
+
+1. Concept ID: 46271900
+Name: "Recurrent deep vein thrombosis"
+Domain: Condition
+Name Relevance: 8/10 - Directly mentions DVT but specifies recurrent cases
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include - This represents a specific type of DVT
+Justification: Recurrent DVT is a clinically important subset of DVT cases
+
+2. Concept ID: 36712971
+Name: "Chronic deep venous thrombosis"
+Domain: Condition
+Name Relevance: 8/10 - Directly mentions DVT but specifies chronic cases
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include - This represents a specific temporal phase of DVT
+Justification: Chronic DVT is a relevant clinical presentation
+
+3. Concept ID: 3174315
+Name: "Chronic deep vein thromboses"
+Domain: Condition
+Name Relevance: 8/10 - Same as above, just plural form
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include - This is essentially the same as concept #2 (plural form)
+Justification: Represents the same condition as #2, just in plural form
+
+4. Concept ID: 44782746
+Name: "Acute deep venous thrombosis"
+Domain: Condition
+Name Relevance: 8/10 - Directly mentions DVT but specifies acute cases
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include - This represents the acute phase of DVT
+Justification: Acute DVT is a key presentation of the condition
+
+5. Concept ID: 4133004
+Name: "Deep venous thrombosis"
+Domain: Condition
+Name Relevance: 10/10 - Exact match to DVT without qualifiers
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include - This is the core concept of DVT
+Justification: This is the primary, unqualified form of the condition
+
+All concepts are relevant as they represent either the core concept of DVT or important clinical subtypes (acute, chronic, recurrent). Since this is a "narrow" concept set, including all these closely related variants is appropriate as they all specifically describe DVT rather than broader or loosely related conditions.
+--------------------
+Search query: Proximal lower limb thrombosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+46271475 | 709602009.0 | Chronic thrombosis of superficial vein of lower limb | Condition | SNOMED | S
+761823 | 16012751000119108 | Thrombosis of artery of bilateral lower limbs | Condition | SNOMED | S
+4236905 | 90958004.0 | Thrombosis of arteries of lower extremity | Condition | SNOMED | S
+4149782 | 309735004.0 | Thrombosis of vein of lower limb | Condition | SNOMED | S
+4323778 | 429434005.0 | Thrombosis of superficial vein of lower limb | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to DVT (Deep Vein Thrombosis) narrow definition:
+
+Concept Set Summary:
+Likely Domain: Cardiovascular/Vascular Conditions
+Key Terms: DVT, deep vein thrombosis, venous thrombosis
+
+Analysis of each concept:
+
+1. Concept ID: 46271475
+Concept Name: Chronic thrombosis of superficial vein of lower limb
+Domain: Condition
+Relevance of Name: 3/10 - Involves superficial veins, not deep veins
+Relevance of Domain: 10/10 - Correct domain for vascular conditions
+Decision: Exclude - DVT specifically refers to deep veins, not superficial veins
+
+2. Concept ID: 761823
+Concept Name: Thrombosis of artery of bilateral lower limbs
+Domain: Condition
+Relevance of Name: 2/10 - Arterial not venous thrombosis
+Relevance of Domain: 10/10 - Correct domain for vascular conditions
+Decision: Exclude - DVT is specifically venous, not arterial
+
+3. Concept ID: 4236905
+Concept Name: Thrombosis of arteries of lower extremity
+Domain: Condition
+Relevance of Name: 2/10 - Arterial not venous thrombosis
+Relevance of Domain: 10/10 - Correct domain for vascular conditions
+Decision: Exclude - DVT is specifically venous, not arterial
+
+4. Concept ID: 4149782
+Concept Name: Thrombosis of vein of lower limb
+Domain: Condition
+Relevance of Name: 9/10 - Matches DVT location and vessel type
+Relevance of Domain: 10/10 - Correct domain for vascular conditions
+Decision: Include - This concept captures venous thrombosis in lower limb, which is the core definition of DVT
+
+5. Concept ID: 4323778
+Concept Name: Thrombosis of superficial vein of lower limb
+Domain: Condition
+Relevance of Name: 3/10 - Involves superficial veins, not deep veins
+Relevance of Domain: 10/10 - Correct domain for vascular conditions
+Decision: Exclude - DVT specifically refers to deep veins, not superficial veins
+
+Final validation:
+- Only concept 4149782 is included as it specifically refers to venous thrombosis in lower limb
+- Other concepts are excluded as they either refer to arterial thrombosis or superficial venous thrombosis
+- For a narrow definition of DVT, we want to be specific to deep venous thrombosis
+--------------------
+Search query: Venous thrombosis of lower limb
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+443537 | 404223003.0 | Deep venous thrombosis of lower extremity | Condition | SNOMED | S
+4323778 | 429434005.0 | Thrombosis of superficial vein of lower limb | Condition | SNOMED | S
+4124857 | 234043001.0 | Thrombosis of vein of lower leg | Condition | SNOMED | S
+37163265 | 1208847002.0 | Venous thromboembolism due to thrombosis of vein of lower limb | Condition | SNOMED | S
+4149782 | 309735004.0 | Thrombosis of vein of lower limb | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are specifically related to Deep Vein Thrombosis (DVT) in a narrow sense:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DVT, deep vein thrombosis, deep venous thrombosis
+
+Analysis of each concept:
+
+1. Concept ID: 443537
+Name: "Deep venous thrombosis of lower extremity"
+- Name Relevance: 10/10 - Exactly matches DVT terminology
+- Domain Relevance: 10/10 - Correct condition domain
+- Decision: INCLUDE - This is the precise definition of DVT
+- Justification: Direct match for deep venous thrombosis
+
+2. Concept ID: 4323778
+Name: "Thrombosis of superficial vein of lower limb"
+- Name Relevance: 2/10 - Specifically refers to superficial veins, not deep veins
+- Domain Relevance: 10/10 - Correct condition domain
+- Decision: EXCLUDE - Superficial vein thrombosis is distinct from DVT
+- Justification: Explicitly refers to superficial veins, not deep veins
+
+3. Concept ID: 4124857
+Name: "Thrombosis of vein of lower leg"
+- Name Relevance: 5/10 - Too general, doesn't specify deep veins
+- Domain Relevance: 10/10 - Correct condition domain
+- Decision: EXCLUDE - Not specific enough to deep veins
+- Justification: Could include both superficial and deep veins
+
+4. Concept ID: 37163265
+Name: "Venous thromboembolism due to thrombosis of vein of lower limb"
+- Name Relevance: 6/10 - Related but broader condition
+- Domain Relevance: 10/10 - Correct condition domain
+- Decision: EXCLUDE - Describes a consequence of thrombosis rather than DVT itself
+- Justification: Refers to VTE, which is a broader condition
+
+5. Concept ID: 4149782
+Name: "Thrombosis of vein of lower limb"
+- Name Relevance: 5/10 - Too general, doesn't specify deep veins
+- Domain Relevance: 10/10 - Correct condition domain
+- Decision: EXCLUDE - Not specific enough to deep veins
+- Justification: Could include both superficial and deep veins
+
+Given the "narrow" specification in the concept set name, we should only include the concept that explicitly refers to deep venous thrombosis. The others are either too broad or refer to different types of thrombosis.
+--------------------
+
+
+STEP 4
+
+Merging results and removing dupliates...
+Done. 

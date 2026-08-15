@@ -1,0 +1,372 @@
+Generative AI
+ai-job-id:
+1bf2a76d-d76a-441a-8cbe-d9a08f0f407b
+ai-generation-complete-timestamp:
+10/08/2025 04:31 PM
+ai-version-info:
+ConceptSetGenerationService Version: v0.8
+ConceptSetGenerator LLM Version: Claude 3.7 Sonnet v1
+ai-prompt:
+Description: include all systemic Lupus Erythematosus, Systemic lupus with organ involvement, systemic Disseminated lupus
+
+exclude drug-induced SLE, childhood SLE, remission SLE, lupus vulgaris
+Vocabulary: ICD10CM
+ai-reasoning:
+STEP 1
+
+Let's think step by step in order to extract the relevant concept parameters from the given description and concept hints.
+
+First, I'll analyze the description:
+- Include: systemic Lupus Erythematosus, Systemic lupus with organ involvement, systemic Disseminated lupus
+- Exclude: drug-induced SLE, childhood SLE, remission SLE, lupus vulgaris
+
+From the concept hints, I can see:
+- id: 0
+- name: "SLE ICD10CM wide"
+- domain: [] (empty list)
+- vocabulary: ["ICD10CM"]
+- standard_concept: [] (empty list)
+- concept_class: "" (empty string)
+
+Now I'll extract the parameters:
+1. id: 0 (from concept hints)
+2. concept_name: "SLE ICD10CM wide" (from concept hints)
+3. keywords: Since description is provided, I'll use it to create keywords rather than the concept_name. The main terms are "systemic Lupus Erythematosus", "Systemic lupus with organ involvement", "systemic Disseminated lupus"
+4. concept_candidates: I need to generate relevant candidates based on the keywords, including synonyms and abbreviations:
+   - "Systemic Lupus Erythematosus"
+   - "SLE"
+   - "Lupus Erythematosus Systemic"
+   - "Systemic lupus with organ involvement"
+   - "Lupus with organ involvement"
+   - "Systemic Disseminated lupus"
+   - "Disseminated lupus"
+   - "Lupus Erythematosus"
+   
+   I should exclude the mentioned conditions:
+   - Not "drug-induced SLE"
+   - Not "childhood SLE"
+   - Not "remission SLE"
+   - Not "lupus vulgaris" (which is a form of tuberculosis, not systemic lupus)
+
+5. standard_concept: Since it's specified as an empty list in concept_hints, I'll keep it as an empty list
+6. vocabulary: ["ICD10CM"] (from concept hints)
+7. concept_class: Since it's specified as an empty string in concept_hints, I'll set it as an empty list
+8. domain: Since it's specified as an empty list in concept_hints, I'll keep it as an empty list
+
+The final filter_params will be a list containing one dictionary with all these parameters.
+
+
+
+STEP 2
+
+Searching for exact matches of keywords: ['systemic Lupus Erythematosus', 'Systemic lupus with organ involvement', 'systemic Disseminated lupus'] 
+
+No exact match found. Will continue with vector search.
+
+
+STEP 3
+
+Searching for similar concepts in vector store...
+Concept candidates: ['Systemic Lupus Erythematosus', 'SLE', 'Lupus Erythematosus Systemic', 'Systemic lupus with organ involvement', 'Lupus with organ involvement', 'Systemic Disseminated lupus', 'Disseminated lupus', 'Lupus Erythematosus']
+
+Search query: Systemic Disseminated lupus
+No results found.
+--------------------
+Search query: Disseminated lupus
+No results found.
+--------------------
+Search query: Lupus Erythematosus
+No results found.
+--------------------
+Search query: SLE
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+1570612 | M32 | Systemic lupus erythematosus (SLE) | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine if the search result is relevant to "SLE ICD10CM wide":
+
+Concept Set Summary:
+Likely Domain: Medical Conditions/Diagnosis Codes
+Key Terms: SLE, Systemic Lupus Erythematosus, ICD-10-CM codes
+
+Concept Analysis:
+Concept ID: 1570612
+Concept Name: Systemic lupus erythematosus (SLE)
+Concept Domain: Condition
+
+Synonyms/Related Terms:
+- For Concept Set: SLE, Lupus, ICD-10 codes for SLE
+- For Concept: SLE, Lupus, Systemic Lupus
+
+Relevance of Name: 10/10 - The concept name exactly matches the primary condition (SLE) we're looking for
+Relevance of Domain: 10/10 - The Condition domain is perfectly aligned with what we'd expect for an ICD-10-CM concept set
+
+Overall Relevance Score: 10/10
+
+Decision: Include
+Justification: This concept is a perfect match for the concept set as it:
+1. Explicitly mentions SLE
+2. Uses the full name "Systemic lupus erythematosus"
+3. Is in the appropriate medical condition domain
+4. Would be a core concept for any ICD-10-CM code set related to SLE
+
+Edge Case Considerations: None - this is a clear, direct match
+
+The concept ID 1570612 should be included in the filtered results as it represents the core condition that the ICD-10-CM codes would be describing.
+--------------------
+Search query: Systemic lupus with organ involvement
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+35208826 | M32.8 | Other forms of systemic lupus erythematosus | Condition | ICD10CM | NS
+45591699 | M05.662 | Rheumatoid arthritis of left knee with involvement of other organs and systems | Condition | ICD10CM | NS
+45582126 | M32.10 | Systemic lupus erythematosus, organ or system involvement unspecified | Condition | ICD10CM | NS
+45606214 | M32.19 | Other organ or system involvement in systemic lupus erythematosus | Condition | ICD10CM | NS
+1570613 | M32.1 | Systemic lupus erythematosus with organ or system involvement | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to SLE (Systemic Lupus Erythematosus) ICD10CM codes:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: SLE, Systemic Lupus Erythematosus, ICD10CM
+
+Analysis of each concept:
+
+1. Concept ID: 35208826
+Name: "Other forms of systemic lupus erythematosus"
+Domain: Condition
+Relevance of Name: 10/10 - Directly mentions SLE
+Relevance of Domain: 10/10 - Matches disease/condition domain
+Decision: Include
+Justification: Directly describes a form of SLE, matches ICD10CM classification
+
+2. Concept ID: 45591699
+Name: "Rheumatoid arthritis of left knee with involvement of other organs"
+Domain: Condition
+Relevance of Name: 2/10 - Different autoimmune condition (RA, not SLE)
+Relevance of Domain: 10/10 - Matches disease domain
+Decision: Exclude
+Justification: Not related to SLE, describes rheumatoid arthritis
+
+3. Concept ID: 45582126
+Name: "Systemic lupus erythematosus, organ or system involvement unspecified"
+Domain: Condition
+Relevance of Name: 10/10 - Directly mentions SLE
+Relevance of Domain: 10/10 - Matches disease domain
+Decision: Include
+Justification: Clearly describes SLE with unspecified involvement
+
+4. Concept ID: 45606214
+Name: "Other organ or system involvement in systemic lupus erythematosus"
+Domain: Condition
+Relevance of Name: 10/10 - Directly mentions SLE
+Relevance of Domain: 10/10 - Matches disease domain
+Decision: Include
+Justification: Describes SLE with system involvement
+
+5. Concept ID: 1570613
+Name: "Systemic lupus erythematosus with organ or system involvement"
+Domain: Condition
+Relevance of Name: 10/10 - Directly mentions SLE
+Relevance of Domain: 10/10 - Matches disease domain
+Decision: Include
+Justification: Clearly describes SLE with system involvement
+
+Final Validation:
+- All included concepts directly mention SLE
+- All concepts are from the Condition domain
+- All concepts appear to be ICD10CM compatible classifications
+- No relevant SLE concepts were excluded
+- All selected concepts represent different aspects of SLE classification
+--------------------
+Search query: Lupus with organ involvement
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+45536229 | S86.802A | Unspecified injury of other muscle(s) and tendon(s) at lower leg level, left leg, initial encounter | Condition | ICD10CM | NS
+15887 | S89.82 | Other specified injuries of left lower leg | Condition | ICD10CM | NS
+45569939 | S89.92XS | Unspecified injury of left lower leg, sequela | Condition | ICD10CM | NS
+15799 | S86.992 | Other injury of unspecified muscle(s) and tendon(s) at lower leg level, left leg | Condition | ICD10CM | NS
+15778 | S86.802 | Unspecified injury of other muscle(s) and tendon(s) at lower leg level, left leg | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to Systemic Lupus Erythematosus (SLE) ICD-10-CM codes:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: SLE, Systemic Lupus Erythematosus, autoimmune disease
+
+Analysis of search results:
+
+1. Concept ID: 45536229
+Name: "Unspecified injury of other muscle(s) and tendon(s) at lower leg level, left leg, initial encounter"
+Domain: Condition
+Relevance of Name: 0/10 - Describes traumatic injury, not autoimmune condition
+Relevance of Domain: 2/10 - While both are conditions, injury is unrelated to SLE
+Decision: Exclude - This is a trauma-related condition, not an SLE diagnosis
+
+2. Concept ID: 15887
+Name: "Other specified injuries of left lower leg"
+Domain: Condition
+Relevance of Name: 0/10 - Describes traumatic injury
+Relevance of Domain: 2/10 - Unrelated to autoimmune conditions
+Decision: Exclude - Trauma-related, not SLE-related
+
+3. Concept ID: 45569939
+Name: "Unspecified injury of left lower leg, sequela"
+Domain: Condition
+Relevance of Name: 0/10 - Describes injury sequela
+Relevance of Domain: 2/10 - Injury-related condition
+Decision: Exclude - Post-injury condition, not SLE-related
+
+4. Concept ID: 15799
+Name: "Other injury of unspecified muscle(s) and tendon(s) at lower leg level, left leg"
+Domain: Condition
+Relevance of Name: 0/10 - Describes muscle/tendon injury
+Relevance of Domain: 2/10 - Injury-related condition
+Decision: Exclude - Musculoskeletal injury, not SLE-related
+
+5. Concept ID: 15778
+Name: "Unspecified injury of other muscle(s) and tendon(s) at lower leg level, left leg"
+Domain: Condition
+Relevance of Name: 0/10 - Describes muscle/tendon injury
+Relevance of Domain: 2/10 - Injury-related condition
+Decision: Exclude - Musculoskeletal injury, not SLE-related
+
+Final Validation:
+- None of the concepts relate to SLE or autoimmune conditions
+- All concepts are trauma/injury-related
+- No relevant concepts were found in the search results
+
+Therefore, no concepts should be included in the filtered list.
+--------------------
+Search query: Lupus Erythematosus Systemic
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+1570612 | M32 | Systemic lupus erythematosus (SLE) | Condition | ICD10CM | NS
+1569846 | L93 | Lupus erythematosus | Condition | ICD10CM | NS
+45606214 | M32.19 | Other organ or system involvement in systemic lupus erythematosus | Condition | ICD10CM | NS
+45582126 | M32.10 | Systemic lupus erythematosus, organ or system involvement unspecified | Condition | ICD10CM | NS
+1570613 | M32.1 | Systemic lupus erythematosus with organ or system involvement | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SLE ICD10CM wide":
+
+1. Concept Set Analysis:
+Likely Domain: Condition/Disease
+Key Terms: SLE, Systemic Lupus Erythematosus, ICD10CM
+Note: "wide" suggests we want a broad/inclusive set of SLE-related concepts
+
+2. Individual Concept Analysis:
+
+Concept #1 (1570612)
+- Name: "Systemic lupus erythematosus (SLE)"
+- Domain: Condition
+- Name Relevance: 10/10 (exact match to core concept)
+- Domain Relevance: 10/10 (matches disease classification)
+Decision: INCLUDE - Perfect match for core SLE concept
+
+Concept #2 (1569846)
+- Name: "Lupus erythematosus"
+- Domain: Condition
+- Name Relevance: 9/10 (broader term that includes SLE)
+- Domain Relevance: 10/10
+Decision: INCLUDE - Relevant as broader category term
+
+Concept #3 (45606214)
+- Name: "Other organ or system involvement in systemic lupus erythematosus"
+- Domain: Condition
+- Name Relevance: 10/10 (specific SLE manifestation)
+- Domain Relevance: 10/10
+Decision: INCLUDE - Relevant subtype of SLE
+
+Concept #4 (45582126)
+- Name: "Systemic lupus erythematosus, organ or system involvement unspecified"
+- Domain: Condition
+- Name Relevance: 10/10 (specific SLE classification)
+- Domain Relevance: 10/10
+Decision: INCLUDE - Relevant classification of SLE
+
+Concept #5 (1570613)
+- Name: "Systemic lupus erythematosus with organ or system involvement"
+- Domain: Condition
+- Name Relevance: 10/10 (specific SLE manifestation)
+- Domain Relevance: 10/10
+Decision: INCLUDE - Relevant subtype of SLE
+
+Final Validation:
+- All concepts are highly relevant to SLE
+- All are within the Condition domain
+- Given the "wide" specification, including all variants is appropriate
+- All concepts represent valid ICD10CM-compatible classifications of SLE
+--------------------
+Search query: Systemic Lupus Erythematosus
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+45582126 | M32.10 | Systemic lupus erythematosus, organ or system involvement unspecified | Condition | ICD10CM | NS
+1569846 | L93 | Lupus erythematosus | Condition | ICD10CM | NS
+1570613 | M32.1 | Systemic lupus erythematosus with organ or system involvement | Condition | ICD10CM | NS
+35208826 | M32.8 | Other forms of systemic lupus erythematosus | Condition | ICD10CM | NS
+1570612 | M32 | Systemic lupus erythematosus (SLE) | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SLE ICD10CM wide":
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: SLE, Systemic Lupus Erythematosus, ICD10CM, wide (indicating broad inclusion)
+
+Analysis of each concept:
+
+1. Concept ID: 45582126
+Concept Name: Systemic lupus erythematosus, organ or system involvement unspecified
+Domain: Condition
+Relevance of Name: 10/10 - Directly mentions SLE with specification
+Relevance of Domain: 10/10 - Matches disease/condition domain
+Decision: Include
+Justification: Perfect match for SLE diagnosis code category
+
+2. Concept ID: 1569846
+Concept Name: Lupus erythematosus
+Domain: Condition
+Relevance of Name: 9/10 - General form of the condition
+Relevance of Domain: 10/10 - Matches disease/condition domain
+Decision: Include
+Justification: Basic form of the condition, relevant for wide coverage
+
+3. Concept ID: 1570613
+Concept Name: Systemic lupus erythematosus with organ or system involvement
+Domain: Condition
+Relevance of Name: 10/10 - Specific SLE variant
+Relevance of Domain: 10/10 - Matches disease/condition domain
+Decision: Include
+Justification: Important SLE specification
+
+4. Concept ID: 35208826
+Concept Name: Other forms of systemic lupus erythematosus
+Domain: Condition
+Relevance of Name: 10/10 - Covers other SLE variants
+Relevance of Domain: 10/10 - Matches disease/condition domain
+Decision: Include
+Justification: Necessary for wide coverage of SLE variants
+
+5. Concept ID: 1570612
+Concept Name: Systemic lupus erythematosus (SLE)
+Domain: Condition
+Relevance of Name: 10/10 - Direct match to SLE
+Relevance of Domain: 10/10 - Matches disease/condition domain
+Decision: Include
+Justification: Core SLE concept
+
+Final Validation:
+- All concepts are highly relevant to SLE
+- All are within the Condition domain
+- The "wide" specification in the concept set name suggests including all variants
+- All concepts represent different aspects or specifications of SLE diagnosis codes
+--------------------
+
+
+STEP 4
+
+Merging results and removing dupliates...
+Done. 

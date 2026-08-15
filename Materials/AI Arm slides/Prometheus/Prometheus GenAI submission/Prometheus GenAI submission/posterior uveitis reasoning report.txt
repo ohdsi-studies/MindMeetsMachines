@@ -1,0 +1,53 @@
+Generative AI
+ai-job-id:
+6776cf7d-7a77-45c4-8bb2-ccb967861fa6
+ai-generation-complete-timestamp:
+10/08/2025 05:28 PM
+ai-version-info:
+ConceptSetGenerationService Version: v0.8
+ConceptSetGenerator LLM Version: Claude 3.7 Sonnet v1
+ai-prompt:
+Description: Intermediate uveitis, pars planitis, posterior uveitis, panuveitis; posterior cyclitis.
+Retinochoroiditis, choroiditis non-infectious , birdshot chorioretinopathy; Vogt–Koyanagi–Harada–associated uveitis; sympathetic ophthalmia; sarcoid-associated uveitis; Behçet-associated posterior uveitis.
+Domain: Condition
+Standard concept: S
+ai-reasoning:
+STEP 1
+
+extract the concept parameters from the given description and concept hints.
+
+First, let's analyze what we have:
+- The description mentions various types of uveitis and related conditions: intermediate uveitis, pars planitis, posterior uveitis, panuveitis, posterior cyclitis, retinochoroiditis, choroiditis non-infectious, birdshot chorioretinopathy, Vogt–Koyanagi–Harada–associated uveitis, sympathetic ophthalmia, sarcoid-associated uveitis, and Behçet-associated posterior uveitis.
+- The concept hint provides: id=0, name="posterior uveitis narrow", domain=["Condition"], vocabulary=[], standard_concept=["S"], and concept_class="".
+
+Since we're focusing on posterior uveitis and related conditions, I'll extract the keywords from the description and generate appropriate concept candidates:
+
+1. The concept name is "posterior uveitis narrow"
+2. Keywords should come from the description, which includes various types of uveitis and related conditions
+3. For concept candidates, I'll include all the specific conditions mentioned in the description that relate to posterior uveitis
+4. The domain is specified as ["Condition"], which matches one of the valid domains
+5. Standard concept is specified as ["S"]
+6. Vocabulary is specified as an empty list
+7. Concept class is specified as an empty string, so I'll convert it to an empty list
+
+Let me create the filter parameters accordingly.
+
+
+
+STEP 2
+
+Searching for exact matches of keywords: ['Intermediate uveitis', 'pars planitis', 'posterior uveitis', 'panuveitis', 'posterior cyclitis', 'Retinochoroiditis', 'choroiditis non-infectious', 'birdshot chorioretinopathy', 'Vogt–Koyanagi–Harada–associated uveitis', 'sympathetic ophthalmia', 'sarcoid-associated uveitis', 'Behçet-associated posterior uveitis'] 
+
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+4197154 | 314428001 | Posterior cyclitis | Condition | SNOMED | S
+439014 | 75614007 | Panuveitis | Condition | SNOMED | S
+434026 | 45688009 | Pars planitis | Condition | SNOMED | S
+4197155 | 314429009 | Intermediate uveitis | Condition | SNOMED | S
+4183040 | 43363007 | Posterior uveitis | Condition | SNOMED | S
+
+
+STEP 4
+
+Merging results and removing dupliates...
+Done. 

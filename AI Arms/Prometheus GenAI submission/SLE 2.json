@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "concept": {
+        "CONCEPT_ID": 1570612,
+        "CONCEPT_NAME": "Systemic lupus erythematosus (SLE)",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M32",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "3-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 35208826,
+        "CONCEPT_NAME": "Other forms of systemic lupus erythematosus",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M32.8",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45582126,
+        "CONCEPT_NAME": "Systemic lupus erythematosus, organ or system involvement unspecified",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M32.10",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45606214,
+        "CONCEPT_NAME": "Other organ or system involvement in systemic lupus erythematosus",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M32.19",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1570613,
+        "CONCEPT_NAME": "Systemic lupus erythematosus with organ or system involvement",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M32.1",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+Generative AI
+ai-job-id:
+692aba58-93da-4962-9a90-b216c421a985
+ai-generation-complete-timestamp:
+10/08/2025 04:28 PM
+ai-version-info:
+ConceptSetGenerationService Version: v0.8
+ConceptSetGenerator LLM Version: Claude 3.7 Sonnet v1
+ai-prompt:
+Description: include all systemic Lupus Erythematosus, Systemic lupus with organ involvement, systemic Disseminated lupus
+
+exclude drug-induced SLE, childhood SLE, remission SLE, lupus vulgaris
+Domain: Condition,Observation
+Standard concept: S
+ai-reasoning:
+STEP 1
+
+extract the concept parameters for Systemic Lupus Erythematosus (SLE).
+
+First, let me analyze the description and concept hints:
+
+The description indicates we need to:
+- Include: systemic Lupus Erythematosus, Systemic lupus with organ involvement, systemic Disseminated lupus
+- Exclude: drug-induced SLE, childhood SLE, remission SLE, lupus vulgaris
+
+The concept hint provides:
+- id: 0
+- name: "SLE - 1"
+- domain: ["Condition", "Observation"]
+- vocabulary: [] (empty list)
+- standard_concept: ["S"]
+- concept_class: "" (empty string)
+
+Now, I'll extract the parameters:
+
+1. ID: 0 (from concept hints)
+2. Concept name: "SLE - 1" (from concept hints)
+3. Keywords: Since description is provided, I'll use it to create keywords rather than the concept name.
+   Keywords should include: ["systemic Lupus Erythematosus", "Systemic lupus with organ involvement", "systemic Disseminated lupus"]
+
+4. Concept candidates: Based on the keywords, I'll generate relevant candidates:
+   - "Systemic Lupus Erythematosus"
+   - "SLE"
+   - "Lupus Erythematosus Systemic"
+   - "Disseminated Lupus Erythematosus"
+   - "Systemic Lupus with organ involvement"
+   - "Lupus with organ manifestation"
+   - "Systemic Disseminated Lupus"
+   
+   I'll exclude:
+   - "Drug-induced lupus erythematosus"
+   - "Drug-induced SLE"
+   - "Childhood SLE"
+   - "Juvenile SLE"
+   - "SLE in remission"
+   - "Lupus vulgaris" (which is a form of cutaneous tuberculosis, not systemic lupus)
+
+5. Standard concept: ["S"] (from concept hints)
+6. Vocabulary: [] (empty list as specified in concept hints)
+7. Concept class: [] (empty list since concept_class was an empty string in concept hints)
+8. Domain: For the domains ["Condition", "Observation"], I need to match them to the domain list.
+   - "Condition" matches exactly to "Condition" in the domain list
+   - "Observation" matches exactly to "Observation" in the domain list
+   So domain will be ["Condition", "Observation"]
+
+The final filter parameters will be structured as required.
+
+
+
+STEP 2
+
+Searching for exact matches of keywords: ['systemic Lupus Erythematosus', 'Systemic lupus with organ involvement', 'systemic Disseminated lupus'] 
+
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+257628 | 55464009 | Systemic lupus erythematosus | Condition | SNOMED | S
+
+
+STEP 3
+
+Searching for similar concepts in vector store...
+Concept candidates: ['Systemic Lupus Erythematosus', 'SLE', 'Lupus Erythematosus Systemic', 'Disseminated Lupus Erythematosus', 'Systemic Lupus with organ involvement', 'Lupus with organ manifestation', 'Systemic Disseminated Lupus']
+
+Search query: SLE
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+4267801 | 36402006.0 | SLE glomerulonephritis syndrome, WHO class IV | Condition | SNOMED | S
+4250483 | 73286009.0 | SLE glomerulonephritis syndrome, WHO class I | Condition | SNOMED | S
+4219859 | 397856003.0 | Systemic lupus erythematosus-related syndrome | Condition | SNOMED | S
+257628 | 55464009.0 | Systemic lupus erythematosus | Condition | SNOMED | S
+4285717 | 68815009.0 | SLE glomerulonephritis syndrome | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "SLE - 1":
+
+Concept Set Summary:
+Likely Domain: Medical Condition/Rheumatology
+Key Terms: SLE, Systemic Lupus Erythematosus
+
+Analysis of each concept:
+
+1. Concept ID: 4267801
+Name: "SLE glomerulonephritis syndrome, WHO class IV"
+- Name Relevance: 5/10 - While related to SLE, too specific (Class IV)
+- Domain Relevance: 10/10 - Correct domain (Condition)
+Decision: Exclude - Too specific for a general SLE concept set
+
+2. Concept ID: 4250483
+Name: "SLE glomerulonephritis syndrome, WHO class I"
+- Name Relevance: 5/10 - While related to SLE, too specific (Class I)
+- Domain Relevance: 10/10 - Correct domain (Condition)
+Decision: Exclude - Too specific for a general SLE concept set
+
+3. Concept ID: 4219859
+Name: "Systemic lupus erythematosus-related syndrome"
+- Name Relevance: 9/10 - Directly related to SLE
+- Domain Relevance: 10/10 - Correct domain (Condition)
+Decision: Include - Represents SLE-related conditions
+
+4. Concept ID: 257628
+Name: "Systemic lupus erythematosus"
+- Name Relevance: 10/10 - Exact match for SLE
+- Domain Relevance: 10/10 - Correct domain (Condition)
+Decision: Include - Perfect match for the concept set
+
+5. Concept ID: 4285717
+Name: "SLE glomerulonephritis syndrome"
+- Name Relevance: 6/10 - Related to SLE but too specific
+- Domain Relevance: 10/10 - Correct domain (Condition)
+Decision: Exclude - Too specific for a general SLE concept set
+
+Final Selection:
+Including concepts 4219859 and 257628 as they represent the core SLE condition and related syndromes without being overly specific to particular manifestations.
+--------------------
+Search query: Lupus with organ manifestation
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+255891 | 200936003.0 | Lupus erythematosus | Condition | SNOMED | S
+3173735 | 13370001000004108 | Exacerbation os systemic lupus | Condition | Nebraska Lexicon | S
+4344400 | 239890001.0 | Systemic lupus erythematosus with multisystem involvement | Condition | SNOMED | S
+4344158 | 239887007.0 | Systemic lupus erythematosus with organ/system involvement | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to Systemic Lupus Erythematosus (SLE):
+
+Concept Set Summary:
+Likely Domain: Medical Condition/Autoimmune Disease
+Key Terms: SLE, Systemic Lupus Erythematosus, Lupus
+
+Analysis of each concept:
+
+1. Concept ID: 255891
+Name: "Lupus erythematosus"
+Domain: Condition
+Name Relevance: 8/10 - Direct match for "lupus erythematosus" though missing "systemic"
+Domain Relevance: 10/10 - Correct medical condition domain
+Overall Score: 9/10
+Decision: Include
+Justification: While not specifically mentioning "systemic," this is the base term for the condition
+
+2. Concept ID: 3173735
+Name: "Exacerbation os systemic lupus"
+Domain: Condition
+Name Relevance: 9/10 - Directly references systemic lupus and its exacerbation
+Domain Relevance: 10/10 - Correct medical condition domain
+Overall Score: 9.5/10
+Decision: Include
+Justification: Specifically relates to SLE flares/exacerbations
+
+3. Concept ID: 4344400
+Name: "Systemic lupus erythematosus with multisystem involvement"
+Domain: Condition
+Name Relevance: 10/10 - Exact match for SLE with additional specificity
+Domain Relevance: 10/10 - Correct medical condition domain
+Overall Score: 10/10
+Decision: Include
+Justification: Perfect match with additional clinical detail
+
+4. Concept ID: 4344158
+Name: "Systemic lupus erythematosus with organ/system involvement"
+Domain: Condition
+Name Relevance: 10/10 - Exact match for SLE with additional specificity
+Domain Relevance: 10/10 - Correct medical condition domain
+Overall Score: 10/10
+Decision: Include
+Justification: Perfect match with additional clinical detail
+
+All concepts are highly relevant to SLE and should be included. Each represents either the core condition or important clinical variants/manifestations of SLE.
+--------------------
+Search query: Lupus Erythematosus Systemic
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+4295179 | 403486000.0 | Acute systemic lupus erythematosus | Condition | SNOMED | S
+255891 | 200936003.0 | Lupus erythematosus | Condition | SNOMED | S
+4344400 | 239890001.0 | Systemic lupus erythematosus with multisystem involvement | Condition | SNOMED | S
+4344158 | 239887007.0 | Systemic lupus erythematosus with organ/system involvement | Condition | SNOMED | S
+257628 | 55464009.0 | Systemic lupus erythematosus | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "SLE - 1":
+
+Concept Set Summary:
+Likely Domain: Medical Condition/Autoimmune Disease
+Key Terms: SLE, Systemic Lupus Erythematosus
+
+Analysis of each concept:
+
+1. Concept ID: 4295179
+Name: "Acute systemic lupus erythematosus"
+Domain: Condition
+Name Relevance: 9/10 - Directly mentions SLE with acute specification
+Domain Relevance: 10/10 - Matches exactly
+Overall Score: 9.5/10
+Decision: Include
+Justification: Represents a specific form of SLE
+
+2. Concept ID: 255891
+Name: "Lupus erythematosus"
+Domain: Condition
+Name Relevance: 7/10 - Generic form, could include non-systemic
+Domain Relevance: 10/10 - Matches condition domain
+Overall Score: 8.5/10
+Decision: Include
+Justification: While more general, it's fundamental to SLE concept
+
+3. Concept ID: 4344400
+Name: "Systemic lupus erythematosus with multisystem involvement"
+Domain: Condition
+Name Relevance: 9/10 - Specific type of SLE
+Domain Relevance: 10/10 - Matches exactly
+Overall Score: 9.5/10
+Decision: Include
+Justification: Represents a variant of SLE
+
+4. Concept ID: 4344158
+Name: "Systemic lupus erythematosus with organ/system involvement"
+Domain: Condition
+Name Relevance: 9/10 - Specific type of SLE
+Domain Relevance: 10/10 - Matches exactly
+Overall Score: 9.5/10
+Decision: Include
+Justification: Represents a variant of SLE
+
+5. Concept ID: 257628
+Name: "Systemic lupus erythematosus"
+Domain: Condition
+Name Relevance: 10/10 - Exact match to SLE
+Domain Relevance: 10/10 - Matches exactly
+Overall Score: 10/10
+Decision: Include
+Justification: Direct match to SLE concept
+
+All concepts are relevant as they either directly represent SLE or its variants. The "-1" in the concept set name appears to be a version identifier rather than a qualifier for filtering concepts.
+--------------------
+Search query: Systemic Lupus Erythematosus
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+255891 | 200936003.0 | Lupus erythematosus | Condition | SNOMED | S
+4344158 | 239887007.0 | Systemic lupus erythematosus with organ/system involvement | Condition | SNOMED | S
+4344400 | 239890001.0 | Systemic lupus erythematosus with multisystem involvement | Condition | SNOMED | S
+4295179 | 403486000.0 | Acute systemic lupus erythematosus | Condition | SNOMED | S
+257628 | 55464009.0 | Systemic lupus erythematosus | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "SLE - 1" (Systemic Lupus Erythematosus):
+
+Concept Set Summary:
+Likely Domain: Medical Condition/Autoimmune Disease
+Key Terms: SLE, Systemic Lupus Erythematosus
+
+Analysis of each concept:
+
+1. Concept ID: 255891
+Name: "Lupus erythematosus"
+Domain: Condition
+Name Relevance: 7/10 - Basic form of the disease but not specifically systemic
+Domain Relevance: 10/10 - Matches medical condition domain
+Overall: 8.5/10
+Decision: Include
+Justification: While not specifically "systemic," this is the base term for the condition
+
+2. Concept ID: 4344158
+Name: "Systemic lupus erythematosus with organ/system involvement"
+Domain: Condition
+Name Relevance: 9/10 - Explicitly mentions SLE with specificity
+Domain Relevance: 10/10 - Matches medical condition domain
+Overall: 9.5/10
+Decision: Include
+Justification: Directly relates to SLE with additional specificity
+
+3. Concept ID: 4344400
+Name: "Systemic lupus erythematosus with multisystem involvement"
+Domain: Condition
+Name Relevance: 9/10 - Explicitly mentions SLE with specificity
+Domain Relevance: 10/10 - Matches medical condition domain
+Overall: 9.5/10
+Decision: Include
+Justification: Directly relates to SLE with additional specificity
+
+4. Concept ID: 4295179
+Name: "Acute systemic lupus erythematosus"
+Domain: Condition
+Name Relevance: 9/10 - Explicitly mentions SLE with temporal modifier
+Domain Relevance: 10/10 - Matches medical condition domain
+Overall: 9.5/10
+Decision: Include
+Justification: Directly relates to SLE with temporal specification
+
+5. Concept ID: 257628
+Name: "Systemic lupus erythematosus"
+Domain: Condition
+Name Relevance: 10/10 - Exact match to SLE
+Domain Relevance: 10/10 - Matches medical condition domain
+Overall: 10/10
+Decision: Include
+Justification: Perfect match for SLE concept
+
+All concepts are relevant to SLE and should be included as they all represent either the core concept or important variations of SLE.
+--------------------
+Search query: Disseminated Lupus Erythematosus
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+4344157 | 239886003.0 | Limited lupus erythematosus | Condition | SNOMED | S
+255891 | 200936003.0 | Lupus erythematosus | Condition | SNOMED | S
+4105637 | 193178008.0 | Polyneuropathy in disseminated lupus erythematosus | Condition | SNOMED | S
+257628 | 55464009.0 | Systemic lupus erythematosus | Condition | SNOMED | S
+4296506 | 403502003.0 | Disseminated discoid lupus erythematosus | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "SLE - 1" (Systemic Lupus Erythematosus):
+
+Concept Set Summary:
+Likely Domain: Medical Condition/Autoimmune Disease
+Key Terms: SLE, Systemic Lupus Erythematosus
+
+Analysis of each concept:
+
+1. Concept ID: 4344157
+Name: Limited lupus erythematosus
+Domain: Condition
+Name Relevance: 6/10 - Related but specifically refers to limited form
+Domain Relevance: 10/10 - Correct disease domain
+Overall: 8/10
+Decision: Include - While "limited" form, still part of SLE spectrum
+
+2. Concept ID: 255891
+Name: Lupus erythematosus
+Domain: Condition
+Name Relevance: 8/10 - General term encompassing SLE
+Domain Relevance: 10/10 - Correct disease domain
+Overall: 9/10
+Decision: Include - Represents the broader disease category
+
+3. Concept ID: 4105637
+Name: Polyneuropathy in disseminated lupus erythematosus
+Domain: Condition
+Name Relevance: 7/10 - Specific complication of SLE
+Domain Relevance: 10/10 - Correct disease domain
+Overall: 8.5/10
+Decision: Include - Represents a manifestation of SLE
+
+4. Concept ID: 257628
+Name: Systemic lupus erythematosus
+Domain: Condition
+Name Relevance: 10/10 - Exact match to SLE
+Domain Relevance: 10/10 - Correct disease domain
+Overall: 10/10
+Decision: Include - Direct match to concept set name
+
+5. Concept ID: 4296506
+Name: Disseminated discoid lupus erythematosus
+Domain: Condition
+Name Relevance: 7/10 - Related but specific to discoid form
+Domain Relevance: 10/10 - Correct disease domain
+Overall: 8.5/10
+Decision: Include - While focusing on discoid form, still part of SLE spectrum
+
+All concepts are relevant as they represent either SLE directly or its various forms and manifestations. The domain is consistent across all concepts (Condition), and all terms are directly related to lupus erythematosus.
+--------------------
+Search query: Systemic Lupus with organ involvement
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+257628 | 55464009.0 | Systemic lupus erythematosus | Condition | SNOMED | S
+606392 | 1144927000.0 | Disorder of gastrointestinal tract due to systemic lupus erythematosus | Condition | SNOMED | S
+3173735 | 13370001000004108 | Exacerbation os systemic lupus | Condition | Nebraska Lexicon | S
+4344400 | 239890001.0 | Systemic lupus erythematosus with multisystem involvement | Condition | SNOMED | S
+4344158 | 239887007.0 | Systemic lupus erythematosus with organ/system involvement | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "SLE - 1" (Systemic Lupus Erythematosus):
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: SLE, Systemic Lupus Erythematosus, lupus
+
+Analysis for each concept:
+
+1. Concept ID: 257628
+Name: "Systemic lupus erythematosus"
+Domain: Condition
+Name Relevance: 10/10 - Exact match for the standard term for SLE
+Domain Relevance: 10/10 - Correct medical condition domain
+Overall Score: 10/10
+Decision: INCLUDE
+Justification: This is the primary, general concept for SLE
+Edge Cases: None - this is the canonical term
+
+2. Concept ID: 606392
+Name: "Disorder of gastrointestinal tract due to SLE"
+Domain: Condition
+Name Relevance: 5/10 - Too specific (organ-specific manifestation)
+Domain Relevance: 10/10 - Correct domain
+Overall Score: 7.5/10
+Decision: EXCLUDE
+Justification: Too specific for a general SLE concept set
+
+3. Concept ID: 3173735
+Name: "Exacerbation os systemic lupus"
+Domain: Condition
+Name Relevance: 7/10 - Related but describes a specific state
+Domain Relevance: 10/10 - Correct domain
+Overall Score: 8.5/10
+Decision: EXCLUDE
+Justification: Describes a specific disease state rather than the condition itself
+
+4. Concept ID: 4344400
+Name: "Systemic lupus erythematosus with multisystem involvement"
+Domain: Condition
+Name Relevance: 8/10 - Very related but adds specificity
+Domain Relevance: 10/10 - Correct domain
+Overall Score: 9/10
+Decision: EXCLUDE
+Justification: Too specific, describes a particular presentation
+
+5. Concept ID: 4344158
+Name: "Systemic lupus erythematosus with organ/system involvement"
+Domain: Condition
+Name Relevance: 8/10 - Very related but adds specificity
+Domain Relevance: 10/10 - Correct domain
+Overall Score: 9/10
+Decision: EXCLUDE
+Justification: Too specific, describes a particular presentation
+
+Final Decision:
+Include only concept 257628 as it represents the general concept of SLE without additional qualifiers or specific manifestations. This aligns with the concept set name "SLE - 1" which appears to be seeking the primary concept for the condition.
+--------------------
+Search query: Systemic Disseminated Lupus
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+3173735 | 13370001000004108 | Exacerbation os systemic lupus | Condition | Nebraska Lexicon | S
+4296506 | 403502003.0 | Disseminated discoid lupus erythematosus | Condition | SNOMED | S
+4344400 | 239890001.0 | Systemic lupus erythematosus with multisystem involvement | Condition | SNOMED | S
+4344158 | 239887007.0 | Systemic lupus erythematosus with organ/system involvement | Condition | SNOMED | S
+257628 | 55464009.0 | Systemic lupus erythematosus | Condition | SNOMED | S
+
+Filtering reasoning:
+ determine which concepts are relevant to "SLE - 1" (Systemic Lupus Erythematosus):
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: SLE, Systemic Lupus Erythematosus, lupus
+
+Analysis of each concept:
+
+1. Concept ID: 3173735
+Name: "Exacerbation os systemic lupus"
+Domain: Condition
+Name Relevance: 8/10 - Directly relates to SLE, though specifically about exacerbation
+Domain Relevance: 10/10 - Matches condition domain
+Overall: 9/10
+Decision: Include
+Justification: Represents a manifestation of SLE
+
+2. Concept ID: 4296506
+Name: "Disseminated discoid lupus erythematosus"
+Domain: Condition
+Name Relevance: 6/10 - Related but specifically discoid form
+Domain Relevance: 10/10 - Matches condition domain
+Overall: 8/10
+Decision: Include
+Justification: While more specific, still represents a form of lupus
+
+3. Concept ID: 4344400
+Name: "Systemic lupus erythematosus with multisystem involvement"
+Domain: Condition
+Name Relevance: 10/10 - Direct match with specification
+Domain Relevance: 10/10 - Matches condition domain
+Overall: 10/10
+Decision: Include
+Justification: Perfect match for SLE with additional specificity
+
+4. Concept ID: 4344158
+Name: "Systemic lupus erythematosus with organ/system involvement"
+Domain: Condition
+Name Relevance: 10/10 - Direct match with specification
+Domain Relevance: 10/10 - Matches condition domain
+Overall: 10/10
+Decision: Include
+Justification: Perfect match for SLE with additional specificity
+
+5. Concept ID: 257628
+Name: "Systemic lupus erythematosus"
+Domain: Condition
+Name Relevance: 10/10 - Exact match
+Domain Relevance: 10/10 - Matches condition domain
+Overall: 10/10
+Decision: Include
+Justification: This is the core concept of SLE
+
+All concepts are relevant as they all represent either SLE itself or specific manifestations/variants of SLE. Therefore, including all IDs.
+--------------------
+
+
+STEP 4
+
+Merging results and removing dupliates...
+Done. 

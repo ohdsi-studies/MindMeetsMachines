@@ -1,0 +1,284 @@
+Generative AI
+ai-job-id:
+71bd8a02-592f-4625-9387-2811a30c8d43
+ai-generation-complete-timestamp:
+10/08/2025 05:29 PM
+ai-version-info:
+ConceptSetGenerationService Version: v0.8
+ConceptSetGenerator LLM Version: Claude 3.7 Sonnet v1
+ai-prompt:
+Description: Diabetic macular edema DME 
+Vocabulary: ICD10CM
+Standard concept: NS
+ai-reasoning:
+STEP 1
+
+Let's think step by step in order to extract the concept parameters from the given information:
+
+1. First, I need to understand what we're looking for:
+   - The description mentions "Diabetic macular edema DME"
+   - The concept hint provides a concept with id 0, name "DMA ICD10CM wide 1", vocabulary "ICD10CM", and standard_concept "NS"
+
+2. For the keywords:
+   - Since a description is provided ("Diabetic macular edema DME"), I should use this for keywords rather than the concept name
+   - The description indicates we're looking for Diabetic Macular Edema, also abbreviated as DME
+   - Keywords should be: ["Diabetic macular edema", "DME"]
+
+3. For concept_candidates:
+   - Based on the keywords, I need to generate relevant candidates
+   - For "Diabetic macular edema" and "DME", relevant candidates would include:
+     * "Diabetic macular edema"
+     * "DME"
+     * "Diabetic retinal edema"
+     * "Macular edema due to diabetes"
+     * "Diabetic maculopathy"
+     * "Edema of macula due to diabetes mellitus"
+
+4. For standard_concept:
+   - The concept hint explicitly specifies "NS" (non-standard), so I'll use ["NS"]
+
+5. For vocabulary:
+   - The concept hint explicitly specifies "ICD10CM", so I'll use ["ICD10CM"]
+
+6. For concept_class:
+   - The concept hint provides an empty string for concept_class, so I'll use an empty list []
+
+7. For domain:
+   - The concept hint provides an empty list for domain, so I'll keep it as an empty list []
+
+8. Validating my extraction:
+   - All required fields are present
+   - Keywords are derived from the description
+   - Concept candidates are relevant to diabetic macular edema
+   - Standard_concept, vocabulary, concept_class, and domain are set according to the concept hints
+   - The structure follows the required format
+
+
+
+STEP 2
+
+Searching for exact matches of keywords: ['Diabetic macular edema', 'DME'] 
+
+No exact match found. Will continue with vector search.
+
+
+STEP 3
+
+Searching for similar concepts in vector store...
+Concept candidates: ['Diabetic macular edema', 'DME', 'Diabetic retinal edema', 'Macular edema due to diabetes', 'Diabetic maculopathy', 'Edema of macula due to diabetes mellitus']
+
+Search query: DME
+No results found.
+--------------------
+Search query: Diabetic macular edema
+No results found.
+--------------------
+Search query: Diabetic retinal edema
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+37200035 | E08.3311 | Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, right eye | Condition | ICD10CM | NS
+45581342 | E08.341 | Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy with macular edema | Condition | ICD10CM | NS
+37200043 | E08.3411 | Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy with macular edema, right eye | Condition | ICD10CM | NS
+45533010 | E08.311 | Diabetes mellitus due to underlying condition with unspecified diabetic retinopathy with macular edema | Condition | ICD10CM | NS
+45591330 | H35.81 | Retinal edema | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to DMA (Diabetic Macular edema) ICD10CM codes:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: Diabetic Macular Edema, DMA, retinopathy with macular edema
+
+Analysis of each concept:
+
+1. Concept ID: 37200035
+Name Relevance: 10/10 - Explicitly mentions diabetic retinopathy with macular edema
+Domain Relevance: 10/10 - Condition domain matches disease classification
+Decision: Include - Perfect match for diabetic macular edema with specific eye location
+
+2. Concept ID: 45581342
+Name Relevance: 10/10 - Explicitly mentions diabetic retinopathy with macular edema
+Domain Relevance: 10/10 - Condition domain matches disease classification
+Decision: Include - Perfect match for diabetic macular edema
+
+3. Concept ID: 37200043
+Name Relevance: 10/10 - Explicitly mentions diabetic retinopathy with macular edema
+Domain Relevance: 10/10 - Condition domain matches disease classification
+Decision: Include - Perfect match for diabetic macular edema with specific eye location
+
+4. Concept ID: 45533010
+Name Relevance: 10/10 - Explicitly mentions diabetic retinopathy with macular edema
+Domain Relevance: 10/10 - Condition domain matches disease classification
+Decision: Include - Perfect match for diabetic macular edema
+
+5. Concept ID: 45591330
+Name Relevance: 5/10 - Mentions retinal edema but not specifically diabetic
+Domain Relevance: 10/10 - Condition domain matches
+Decision: Exclude - Too general, not specifically diabetic macular edema
+
+Final Validation:
+- All included concepts explicitly mention diabetic retinopathy with macular edema
+- Excluded concept is too general and doesn't specify diabetic condition
+- IDs match original search results
+--------------------
+Search query: Diabetic maculopathy
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+37200079 | E08.37 | Diabetes mellitus due to underlying condition with diabetic macular edema, resolved following treatment | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine if the concept is relevant to DMA (Diabetic Macular edema) ICD10CM codes:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DMA, Diabetic Macular Edema, ICD10CM
+
+Concept Analysis:
+Concept ID: 37200079
+Concept Name: Diabetes mellitus due to underlying condition with diabetic macular edema, resolved following treatment
+Concept Domain: Condition
+
+Synonyms/Related Terms:
+- For Concept Set: DMA, diabetic macular edema, diabetic retinopathy with macular involvement
+- For Concept: DME, resolved diabetic macular edema, treated DMA
+
+Relevance of Name: 9/10 - The concept directly mentions "diabetic macular edema" which is exactly what DMA stands for. The only reason it's not 10/10 is because it specifically refers to a resolved state.
+
+Relevance of Domain: 10/10 - The concept is in the Condition domain which perfectly matches the expected domain for an ICD10CM diagnosis code.
+
+Overall Relevance Score: 9.5/10
+
+Decision: Include
+Justification: This concept is highly relevant as it specifically describes diabetic macular edema, which is exactly what DMA refers to. Although it specifies a resolved state following treatment, it's still a valid ICD10CM code for DMA and should be included in a wide concept set.
+
+Edge Case Considerations: 
+- The "resolved" status might make this seem less relevant, but for a wide concept set, it's important to include various states of the condition
+- The specification of "due to underlying condition" makes this more specific than general DMA, but it's still relevant for a wide concept set
+
+After validation, this concept should be included as it directly relates to DMA and is an appropriate ICD10CM code.
+--------------------
+Search query: Macular edema due to diabetes
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+37200251 | E11.37X1 | Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, right eye | Condition | ICD10CM | NS
+37200193 | E10.37 | Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment | Condition | ICD10CM | NS
+37200253 | E11.37X3 | Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral | Condition | ICD10CM | NS
+37200250 | E11.37 | Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment | Condition | ICD10CM | NS
+37200196 | E10.37X3 | Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to DMA (Diabetic Macular edema) ICD10CM codes:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DMA, diabetic macular edema, ICD10CM
+
+Analysis for each concept:
+
+1. Concept ID: 37200251
+- Name: Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, right eye
+- Domain: Condition
+- Name Relevance: 10/10 - Directly mentions diabetic macular edema
+- Domain Relevance: 10/10 - Condition domain matches
+- Decision: Include
+- Justification: Explicitly describes DMA with specific laterality (right eye)
+
+2. Concept ID: 37200193
+- Name: Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment
+- Domain: Condition
+- Name Relevance: 10/10 - Directly mentions diabetic macular edema
+- Domain Relevance: 10/10 - Condition domain matches
+- Decision: Include
+- Justification: Explicitly describes DMA for Type 1 diabetes
+
+3. Concept ID: 37200253
+- Name: Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral
+- Domain: Condition
+- Name Relevance: 10/10 - Directly mentions diabetic macular edema
+- Domain Relevance: 10/10 - Condition domain matches
+- Decision: Include
+- Justification: Explicitly describes DMA with bilateral involvement
+
+4. Concept ID: 37200250
+- Name: Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment
+- Domain: Condition
+- Name Relevance: 10/10 - Directly mentions diabetic macular edema
+- Domain Relevance: 10/10 - Condition domain matches
+- Decision: Include
+- Justification: Explicitly describes DMA for Type 2 diabetes
+
+5. Concept ID: 37200196
+- Name: Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral
+- Domain: Condition
+- Name Relevance: 10/10 - Directly mentions diabetic macular edema
+- Domain Relevance: 10/10 - Condition domain matches
+- Decision: Include
+- Justification: Explicitly describes DMA with bilateral involvement
+
+All concepts are highly relevant as they:
+1. Explicitly mention diabetic macular edema
+2. Are proper ICD10CM condition codes
+3. Cover different types of diabetes and laterality specifications
+4. Include resolved status which is important for clinical documentation
+--------------------
+Search query: Edema of macula due to diabetes mellitus
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+45533010 | E08.311 | Diabetes mellitus due to underlying condition with unspecified diabetic retinopathy with macular edema | Condition | ICD10CM | NS
+37200307 | E13.37 | Other specified diabetes mellitus with diabetic macular edema, resolved following treatment | Condition | ICD10CM | NS
+37200250 | E11.37 | Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment | Condition | ICD10CM | NS
+37200196 | E10.37X3 | Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral | Condition | ICD10CM | NS
+37200193 | E10.37 | Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to DMA (Diabetic Macular edema) ICD10CM codes:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: DMA, diabetic macular edema, ICD10CM
+
+Analysis for each concept:
+
+1. Concept ID: 45533010
+Concept Name: Diabetes mellitus with unspecified diabetic retinopathy with macular edema
+Domain: Condition
+Relevance of Name: 8/10 - Contains macular edema and diabetes, but less specific
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include - Despite being less specific, it's a valid DMA ICD10 code
+
+2. Concept ID: 37200307
+Concept Name: Other specified diabetes mellitus with diabetic macular edema, resolved following treatment
+Domain: Condition
+Relevance of Name: 10/10 - Directly mentions diabetic macular edema
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include - Perfect match for DMA
+
+3. Concept ID: 37200250
+Concept Name: Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment
+Domain: Condition
+Relevance of Name: 10/10 - Directly mentions diabetic macular edema
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include - Perfect match for DMA
+
+4. Concept ID: 37200196
+Concept Name: Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral
+Domain: Condition
+Relevance of Name: 10/10 - Directly mentions diabetic macular edema
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include - Perfect match for DMA
+
+5. Concept ID: 37200193
+Concept Name: Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment
+Domain: Condition
+Relevance of Name: 10/10 - Directly mentions diabetic macular edema
+Relevance of Domain: 10/10 - Matches condition domain
+Decision: Include - Perfect match for DMA
+
+All concepts are relevant as they specifically relate to diabetic macular edema (DMA) and are ICD10CM condition codes. Each concept represents a variation of DMA with different diabetes types or specifications, making them all valid for inclusion.
+--------------------
+
+
+STEP 4
+
+Merging results and removing dupliates...
+Done. 
