@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "concept": {
+        "CONCEPT_ID": 1569967,
+        "CONCEPT_NAME": "Felty's syndrome",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M05.0",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1569966,
+        "CONCEPT_NAME": "Rheumatoid arthritis with rheumatoid factor",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M05",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "3-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 35208753,
+        "CONCEPT_NAME": "Rheumatoid arthritis, unspecified",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M06.9",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45591694,
+        "CONCEPT_NAME": "Rheumatoid polyneuropathy with rheumatoid arthritis of right hand",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M05.541",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45567415,
+        "CONCEPT_NAME": "Rheumatoid polyneuropathy with rheumatoid arthritis of multiple sites",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M05.59",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1570007,
+        "CONCEPT_NAME": "Rheumatoid polyneuropathy with rheumatoid arthritis",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "M05.5",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    }
+  ]
+}

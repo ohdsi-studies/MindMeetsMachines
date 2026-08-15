@@ -1,0 +1,610 @@
+Generative AI
+ai-job-id:
+096adb5b-609a-4254-9ce8-0fccd2306868
+ai-generation-complete-timestamp:
+10/08/2025 05:25 PM
+ai-version-info:
+ConceptSetGenerationService Version: v0.8
+ConceptSetGenerator LLM Version: Claude 3.7 Sonnet v1
+ai-prompt:
+Description: systemic sclerosis,
+Systemic scleroderma
+Progressive systemic sclerosis; 
+cutaneous Systemic Sclerosis , Raynaud's phenomenon
+Vocabulary: ICD10CM
+Standard concept: NS
+ai-reasoning:
+STEP 1
+
+extract the concept parameters from the given description and concept hints.
+
+First, let's analyze what we have:
+
+1. Description: The description mentions "systemic sclerosis", "Systemic scleroderma", "Progressive systemic sclerosis", "cutaneous Systemic Sclerosis", and "Raynaud's phenomenon". These are all related to systemic sclerosis, which is a rare autoimmune disease characterized by hardening of the skin and internal organs.
+
+2. Concept Hints: We have one concept with:
+   - id: 0
+   - name: 'SS ICD10CM wide 3'
+   - domain: [] (empty list)
+   - vocabulary: ['ICD10CM']
+   - standard_concept: ['NS']
+   - concept_class: '' (empty string)
+
+3. Domain List: A list of valid domains in OHDSI.
+
+Now, let's extract the parameters:
+
+For the concept with id 0:
+- concept_name: 'SS ICD10CM wide 3'
+- keywords: Since we have a description, we should use that to create keywords. From the description, we can extract: "systemic sclerosis", "Systemic scleroderma", "Progressive systemic sclerosis", "cutaneous Systemic Sclerosis", "Raynaud's phenomenon"
+- concept_candidates: Based on the keywords, we should include synonyms and related terms: "systemic sclerosis", "Systemic scleroderma", "Progressive systemic sclerosis", "cutaneous Systemic Sclerosis", "Raynaud's phenomenon", "scleroderma", "CREST syndrome", "limited systemic sclerosis", "diffuse systemic sclerosis", "systemic sclerosis sine scleroderma"
+- standard_concept: ['NS'] (as specified in concept_hints)
+- vocabulary: ['ICD10CM'] (as specified in concept_hints)
+- concept_class: [] (empty list since concept_class is an empty string in concept_hints)
+- domain: [] (empty list as specified in concept_hints)
+
+This gives us our final filter parameters.
+
+
+
+STEP 2
+
+Searching for exact matches of keywords: ['systemic sclerosis', 'Systemic scleroderma', 'Progressive systemic sclerosis', 'cutaneous Systemic Sclerosis', "Raynaud's phenomenon"] 
+
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+35208828 | M34.0 | Progressive systemic sclerosis | Condition | ICD10CM | NS
+
+
+STEP 3
+
+Searching for similar concepts in vector store...
+Concept candidates: ['systemic sclerosis', 'Systemic scleroderma', 'Progressive systemic sclerosis', 'cutaneous Systemic Sclerosis', "Raynaud's phenomenon", 'scleroderma', 'CREST syndrome', 'limited systemic sclerosis', 'diffuse systemic sclerosis', 'systemic sclerosis sine scleroderma']
+
+Search query: Raynaud's phenomenon
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+45538443 | I73.01 | Raynaud's syndrome with gangrene | Condition | ICD10CM | NS
+45581814 | I73.00 | Raynaud's syndrome without gangrene | Condition | ICD10CM | NS
+1569325 | I73.0 | Raynaud's syndrome | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SS ICD10CM wide 3":
+
+1. Concept Set Analysis:
+Likely Domain: ICD-10-CM Diagnosis Codes
+Key Terms: SS (likely referring to Systemic Sclerosis/Scleroderma), wide (indicating broad inclusion)
+"Wide 3" suggests including parent and child concepts within 3 levels
+
+2. Individual Concept Analysis:
+
+Concept #1: 45538443
+Name: Raynaud's syndrome with gangrene
+Domain: Condition
+Relevance Analysis:
+- Name Relevance: 8/10 (Raynaud's is a common manifestation of SS)
+- Domain Relevance: 10/10 (Condition matches medical diagnosis domain)
+Decision: Include
+Justification: Raynaud's syndrome is a key feature of systemic sclerosis, present in ~95% of cases
+
+Concept #2: 45581814
+Name: Raynaud's syndrome without gangrene
+Domain: Condition
+Relevance Analysis:
+- Name Relevance: 8/10 (Raynaud's is a common manifestation of SS)
+- Domain Relevance: 10/10 (Condition matches medical diagnosis domain)
+Decision: Include
+Justification: Same as above, represents a variant of Raynaud's syndrome
+
+Concept #3: 1569325
+Name: Raynaud's syndrome
+Domain: Condition
+Relevance Analysis:
+- Name Relevance: 8/10 (Raynaud's is a common manifestation of SS)
+- Domain Relevance: 10/10 (Condition matches medical diagnosis domain)
+Decision: Include
+Justification: This is the parent concept for Raynaud's syndrome, which is highly relevant to SS
+
+Final Validation:
+- All concepts are variants of Raynaud's syndrome, which is a key feature of systemic sclerosis
+- The hierarchical relationship between these concepts fits the "wide 3" specification
+- All concepts are within the appropriate medical condition domain
+--------------------
+Search query: Systemic scleroderma
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+35208702 | L94.0 | Localized scleroderma [morphea] | Condition | ICD10CM | NS
+35208703 | L94.1 | Linear scleroderma | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SS ICD10CM wide 3":
+
+Concept Set Summary:
+Likely Domain: Medical Conditions/Diagnoses
+Key Terms: SS (likely referring to Systemic Sclerosis/Scleroderma), ICD10CM (medical classification system)
+
+Analysis for Concept 1:
+ID: 35208702
+Name: Localized scleroderma [morphea]
+Domain: Condition
+
+Synonyms/Related Terms:
+- For Concept Set: Systemic Sclerosis, Scleroderma, SS
+- For Concept: Morphea, Circumscribed Scleroderma
+
+Relevance of Name: 8/10 - Directly related to scleroderma, though localized form
+Relevance of Domain: 10/10 - Matches medical condition domain
+Overall Score: 9/10
+
+Decision: Include
+Justification: Though this represents localized scleroderma, it's still a form of scleroderma (SS) and would be included in ICD10CM classification
+
+Analysis for Concept 2:
+ID: 35208703
+Name: Linear scleroderma
+Domain: Condition
+
+Synonyms/Related Terms:
+- For Concept Set: Systemic Sclerosis, Scleroderma, SS
+- For Concept: Linear morphea, Band-like scleroderma
+
+Relevance of Name: 8/10 - Directly related to scleroderma, though a specific subtype
+Relevance of Domain: 10/10 - Matches medical condition domain
+Overall Score: 9/10
+
+Decision: Include
+Justification: Linear scleroderma is a subtype of scleroderma and would be included in ICD10CM classification
+
+Final Validation:
+- Both concepts are forms of scleroderma and would be included in ICD10CM coding
+- Both are relevant conditions within the scleroderma spectrum
+- The IDs match the original search results
+--------------------
+Search query: cutaneous Systemic Sclerosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+1568559 | H15 | Disorders of sclera | Condition | ICD10CM | NS
+35208830 | M34.2 | Systemic sclerosis induced by drug and chemical | Condition | ICD10CM | NS
+45572448 | M34.89 | Other systemic sclerosis | Condition | ICD10CM | NS
+1570620 | M34.8 | Other forms of systemic sclerosis | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to Systemic Sclerosis (SS) ICD10CM codes:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: Systemic Sclerosis, SS, Scleroderma
+
+Analysis of each concept:
+
+1. Concept ID: 1568559
+Concept Name: Disorders of sclera
+Domain: Condition
+- Name Relevance: 3/10 - While related to "sclera," this refers to eye disorders rather than systemic sclerosis
+- Domain Relevance: 10/10 - Correct medical condition domain
+Overall Score: 6.5/10
+Decision: Exclude
+Justification: This refers to eye conditions affecting the sclera, not systemic sclerosis
+
+2. Concept ID: 35208830
+Concept Name: Systemic sclerosis induced by drug and chemical
+Domain: Condition
+- Name Relevance: 10/10 - Directly mentions systemic sclerosis
+- Domain Relevance: 10/10 - Correct medical condition domain
+Overall Score: 10/10
+Decision: Include
+Justification: Specifically describes a form of systemic sclerosis
+
+3. Concept ID: 45572448
+Concept Name: Other systemic sclerosis
+Domain: Condition
+- Name Relevance: 10/10 - Directly mentions systemic sclerosis
+- Domain Relevance: 10/10 - Correct medical condition domain
+Overall Score: 10/10
+Decision: Include
+Justification: Clearly describes a form of systemic sclerosis
+
+4. Concept ID: 1570620
+Concept Name: Other forms of systemic sclerosis
+Domain: Condition
+- Name Relevance: 10/10 - Directly mentions systemic sclerosis
+- Domain Relevance: 10/10 - Correct medical condition domain
+Overall Score: 10/10
+Decision: Include
+Justification: Explicitly refers to forms of systemic sclerosis
+
+Final Validation:
+- All included concepts directly relate to systemic sclerosis
+- Excluded concept (disorders of sclera) is clearly not related to systemic sclerosis
+- All IDs match original search results
+--------------------
+Search query: Progressive systemic sclerosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+45582130 | M34.83 | Systemic sclerosis with polyneuropathy | Condition | ICD10CM | NS
+45572448 | M34.89 | Other systemic sclerosis | Condition | ICD10CM | NS
+1570620 | M34.8 | Other forms of systemic sclerosis | Condition | ICD10CM | NS
+35208828 | M34.0 | Progressive systemic sclerosis | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SS ICD10CM wide 3" by analyzing each search result:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: SS (Systemic Sclerosis), ICD10CM (medical classification system), wide 3 (broad inclusion)
+
+Analysis of each concept:
+
+1. Concept ID: 45582130
+Concept Name: "Systemic sclerosis with polyneuropathy"
+Domain: Condition
+- Name Relevance: 9/10 - Directly mentions systemic sclerosis
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall Score: 9.5/10
+Decision: Include
+Justification: This is a specific form of systemic sclerosis, relevant for a wide SS concept set
+
+2. Concept ID: 45572448
+Concept Name: "Other systemic sclerosis"
+Domain: Condition
+- Name Relevance: 10/10 - Directly refers to systemic sclerosis
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall Score: 10/10
+Decision: Include
+Justification: Captures broader systemic sclerosis categories
+
+3. Concept ID: 1570620
+Concept Name: "Other forms of systemic sclerosis"
+Domain: Condition
+- Name Relevance: 10/10 - Directly refers to systemic sclerosis
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall Score: 10/10
+Decision: Include
+Justification: Similar to concept 2, captures broader SS categories
+
+4. Concept ID: 35208828
+Concept Name: "Progressive systemic sclerosis"
+Domain: Condition
+- Name Relevance: 10/10 - Directly refers to systemic sclerosis
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall Score: 10/10
+Decision: Include
+Justification: Represents a specific type of systemic sclerosis
+
+Final Validation:
+- All concepts are highly relevant to systemic sclerosis
+- All are within the Condition domain
+- The "wide 3" in the concept set name suggests broad inclusion
+- All concepts represent valid ICD10CM categorizations of systemic sclerosis
+--------------------
+Search query: scleroderma
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+35208702 | L94.0 | Localized scleroderma [morphea] | Condition | ICD10CM | NS
+35208703 | L94.1 | Linear scleroderma | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SS ICD10CM wide 3":
+
+Concept Set Summary:
+Likely Domain: Medical Conditions/Diagnoses
+Key Terms: SS (likely referring to Systemic Sclerosis/Scleroderma), ICD10CM (medical classification system), wide (indicating broad inclusion)
+
+Analysis for Concept 1:
+ID: 35208702
+Name: Localized scleroderma [morphea]
+Domain: Condition
+
+Synonyms/Related Terms:
+- For Concept Set: Systemic Sclerosis, Scleroderma, SSc
+- For Concept: Morphea, Circumscribed Scleroderma
+
+Relevance of Name: 8/10 - Scleroderma is directly related to SS (Systemic Sclerosis)
+Relevance of Domain: 10/10 - Condition domain matches the medical nature of ICD10CM codes
+
+Overall Relevance Score: 9/10
+
+Decision: Include
+Justification: Localized scleroderma is a form of scleroderma that falls under the SS (Systemic Sclerosis) umbrella in ICD10CM classification.
+
+Analysis for Concept 2:
+ID: 35208703
+Name: Linear scleroderma
+Domain: Condition
+
+Synonyms/Related Terms:
+- For Concept Set: Systemic Sclerosis, Scleroderma, SSc
+- For Concept: Linear morphea, Band-like scleroderma
+
+Relevance of Name: 8/10 - Scleroderma is directly related to SS (Systemic Sclerosis)
+Relevance of Domain: 10/10 - Condition domain matches the medical nature of ICD10CM codes
+
+Overall Relevance Score: 9/10
+
+Decision: Include
+Justification: Linear scleroderma is another subtype of scleroderma that belongs in the SS (Systemic Sclerosis) ICD10CM classification.
+
+Both concepts are highly relevant to the concept set as they represent specific types of scleroderma that would be included in a broad (wide) ICD10CM classification for SS (Systemic Sclerosis).
+--------------------
+Search query: systemic sclerosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+45582130 | M34.83 | Systemic sclerosis with polyneuropathy | Condition | ICD10CM | NS
+35208828 | M34.0 | Progressive systemic sclerosis | Condition | ICD10CM | NS
+45596565 | M34.81 | Systemic sclerosis with lung involvement | Condition | ICD10CM | NS
+45572448 | M34.89 | Other systemic sclerosis | Condition | ICD10CM | NS
+1570620 | M34.8 | Other forms of systemic sclerosis | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SS ICD10CM wide 3" by analyzing each search result:
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: SS (Systemic Sclerosis), ICD10CM (diagnostic coding system), wide 3 (suggesting broad/inclusive categorization)
+
+Analysis of each concept:
+
+1. Concept ID: 45582130
+Name: "Systemic sclerosis with polyneuropathy"
+Domain Match: 10/10 (Condition domain matches)
+Name Match: 9/10 (Clear SS reference with specific manifestation)
+Overall: 9.5/10
+Decision: Include - This is a specific form of systemic sclerosis
+Edge Case: None - Clear SS diagnosis
+
+2. Concept ID: 35208828
+Name: "Progressive systemic sclerosis"
+Domain Match: 10/10 (Condition domain matches)
+Name Match: 9/10 (Direct SS reference)
+Overall: 9.5/10
+Decision: Include - This is a primary form of SS
+Edge Case: None - Clear SS diagnosis
+
+3. Concept ID: 45596565
+Name: "Systemic sclerosis with lung involvement"
+Domain Match: 10/10 (Condition domain matches)
+Name Match: 9/10 (Clear SS reference with specific manifestation)
+Overall: 9.5/10
+Decision: Include - This is a specific form of systemic sclerosis
+Edge Case: None - Clear SS diagnosis
+
+4. Concept ID: 45572448
+Name: "Other systemic sclerosis"
+Domain Match: 10/10 (Condition domain matches)
+Name Match: 9/10 (Clear SS reference)
+Overall: 9.5/10
+Decision: Include - This captures other forms of SS
+Edge Case: None - Clear SS diagnosis
+
+5. Concept ID: 1570620
+Name: "Other forms of systemic sclerosis"
+Domain Match: 10/10 (Condition domain matches)
+Name Match: 9/10 (Clear SS reference)
+Overall: 9.5/10
+Decision: Include - This captures other forms of SS
+Edge Case: Potential duplicate with ID 45572448, but include both as they may represent different coding systems
+
+Given that this is a "wide" concept set for SS, all these concepts should be included as they all represent valid systemic sclerosis diagnoses.
+--------------------
+Search query: diffuse systemic sclerosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+35208828 | M34.0 | Progressive systemic sclerosis | Condition | ICD10CM | NS
+1570620 | M34.8 | Other forms of systemic sclerosis | Condition | ICD10CM | NS
+45572448 | M34.89 | Other systemic sclerosis | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SS ICD10CM wide 3" (Systemic Sclerosis ICD-10-CM codes with wide inclusion):
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: Systemic Sclerosis, SS, Scleroderma
+
+Analysis for each concept:
+
+1. Concept ID: 35208828
+Concept Name: Progressive systemic sclerosis
+Domain: Condition
+Relevance of Name: 10/10 - Direct match with systemic sclerosis
+Relevance of Domain: 10/10 - Condition domain matches perfectly
+Overall Score: 10/10
+Decision: Include
+Justification: Progressive systemic sclerosis is a direct match for systemic sclerosis and is a key ICD-10 code for this condition
+
+2. Concept ID: 1570620
+Concept Name: Other forms of systemic sclerosis
+Domain: Condition
+Relevance of Name: 10/10 - Direct match with systemic sclerosis
+Relevance of Domain: 10/10 - Condition domain matches perfectly
+Overall Score: 10/10
+Decision: Include
+Justification: This represents other forms of systemic sclerosis which should be included in a wide definition
+
+3. Concept ID: 45572448
+Concept Name: Other systemic sclerosis
+Domain: Condition
+Relevance of Name: 10/10 - Direct match with systemic sclerosis
+Relevance of Domain: 10/10 - Condition domain matches perfectly
+Overall Score: 10/10
+Decision: Include
+Justification: Similar to concept #2, this represents variations of systemic sclerosis that should be included in a wide definition
+
+Final Validation:
+- All concepts are highly relevant to systemic sclerosis
+- All are in the correct domain (Condition)
+- The "wide 3" specification suggests we should include various forms of the condition
+- No concepts need to be excluded as all directly relate to systemic sclerosis
+--------------------
+Search query: CREST syndrome
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+35208829 | M34.1 | CR(E)ST syndrome | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine if CR(E)ST syndrome is relevant to SS (Systemic Sclerosis) ICD10CM codes:
+
+1. Concept Set Analysis:
+Likely Domain: Medical Conditions/Diagnosis Codes
+Key Terms: SS (Systemic Sclerosis), ICD-10-CM classification
+Expected scope: Wide range of ICD-10 codes related to systemic sclerosis
+
+2. Concept Analysis:
+Concept ID: 35208829
+Concept Name: CR(E)ST syndrome
+Domain: Condition
+
+Relevance Analysis:
+- CR(E)ST syndrome is a variant of systemic sclerosis characterized by:
+  * Calcinosis
+  * Raynaud's phenomenon
+  * (E)sophageal dysmotility
+  * Sclerodactyly
+  * Telangiectasia
+
+Name Relevance: 9/10 
+- CR(E)ST syndrome is a direct subtype of systemic sclerosis
+- It represents a specific manifestation pattern of SS
+- Highly relevant to the concept set's focus
+
+Domain Relevance: 10/10
+- "Condition" domain aligns perfectly with ICD-10-CM diagnostic codes
+- This is exactly the type of condition that would be included in ICD-10 classification
+
+Overall Relevance Score: 9.5/10
+
+Decision: INCLUDE
+Justification:
+1. CR(E)ST syndrome is a specific variant of systemic sclerosis
+2. It would have dedicated ICD-10-CM codes
+3. It's essential for comprehensive SS coding coverage
+4. The condition is directly related to the core concept of systemic sclerosis
+
+Edge Case Consideration:
+- While this is a specific subtype, the request for "wide" coverage supports its inclusion
+- The term is clearly related to SS and would be part of any comprehensive SS coding set
+--------------------
+Search query: systemic sclerosis sine scleroderma
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+45596565 | M34.81 | Systemic sclerosis with lung involvement | Condition | ICD10CM | NS
+35208703 | L94.1 | Linear scleroderma | Condition | ICD10CM | NS
+45572448 | M34.89 | Other systemic sclerosis | Condition | ICD10CM | NS
+1570620 | M34.8 | Other forms of systemic sclerosis | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SS ICD10CM wide 3" (Systemic Sclerosis ICD-10-CM codes with wide coverage):
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: Systemic Sclerosis (SS), Scleroderma, ICD-10-CM classification
+
+Analysis for each concept:
+
+1. Concept ID: 45596565
+Name: "Systemic sclerosis with lung involvement"
+Domain: Condition
+- Name Relevance: 10/10 - Directly mentions systemic sclerosis
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall Score: 10/10
+Decision: Include
+Justification: Clear systemic sclerosis diagnosis with specific manifestation
+
+2. Concept ID: 35208703
+Name: "Linear scleroderma"
+Domain: Condition
+- Name Relevance: 7/10 - Related but different subtype of scleroderma
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall Score: 8.5/10
+Decision: Include
+Justification: While a specific subtype, it's part of the broader scleroderma spectrum
+
+3. Concept ID: 45572448
+Name: "Other systemic sclerosis"
+Domain: Condition
+- Name Relevance: 10/10 - Directly mentions systemic sclerosis
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall Score: 10/10
+Decision: Include
+Justification: Clearly part of systemic sclerosis classification
+
+4. Concept ID: 1570620
+Name: "Other forms of systemic sclerosis"
+Domain: Condition
+- Name Relevance: 10/10 - Directly mentions systemic sclerosis
+- Domain Relevance: 10/10 - Matches condition domain
+- Overall Score: 10/10
+Decision: Include
+Justification: Clearly part of systemic sclerosis classification
+
+All concepts are relevant as they represent various forms and manifestations of systemic sclerosis, which aligns with the broad ICD-10-CM classification requirement ("wide 3"). The concepts cover both specific and general forms of the condition.
+--------------------
+Search query: limited systemic sclerosis
+Search results:
+id | code | name | domain | vocabulary | standard_concept:
+45582130 | M34.83 | Systemic sclerosis with polyneuropathy | Condition | ICD10CM | NS
+45596565 | M34.81 | Systemic sclerosis with lung involvement | Condition | ICD10CM | NS
+35208828 | M34.0 | Progressive systemic sclerosis | Condition | ICD10CM | NS
+1570620 | M34.8 | Other forms of systemic sclerosis | Condition | ICD10CM | NS
+45572448 | M34.89 | Other systemic sclerosis | Condition | ICD10CM | NS
+
+Filtering reasoning:
+ determine which concepts are relevant to "SS ICD10CM wide 3" (Systemic Sclerosis ICD-10-CM codes with wide inclusion):
+
+Concept Set Summary:
+Likely Domain: Condition/Disease
+Key Terms: Systemic Sclerosis (SS), ICD-10-CM classification, broad/wide inclusion
+
+Analysis of each concept:
+
+1. Concept ID: 45582130
+Concept Name: Systemic sclerosis with polyneuropathy
+Domain: Condition
+Name Relevance: 10/10 - Directly mentions systemic sclerosis with specific manifestation
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include
+Justification: Clear systemic sclerosis diagnosis code with manifestation
+
+2. Concept ID: 45596565
+Concept Name: Systemic sclerosis with lung involvement
+Domain: Condition
+Name Relevance: 10/10 - Directly mentions systemic sclerosis with specific manifestation
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include
+Justification: Clear systemic sclerosis diagnosis code with manifestation
+
+3. Concept ID: 35208828
+Concept Name: Progressive systemic sclerosis
+Domain: Condition
+Name Relevance: 10/10 - Direct match to systemic sclerosis
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include
+Justification: Core systemic sclerosis concept
+
+4. Concept ID: 1570620
+Concept Name: Other forms of systemic sclerosis
+Domain: Condition
+Name Relevance: 10/10 - Directly related to systemic sclerosis
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include
+Justification: Captures other forms of systemic sclerosis
+
+5. Concept ID: 45572448
+Concept Name: Other systemic sclerosis
+Domain: Condition
+Name Relevance: 10/10 - Directly related to systemic sclerosis
+Domain Relevance: 10/10 - Matches condition domain
+Decision: Include
+Justification: Similar to previous concept, captures other systemic sclerosis variants
+
+All concepts are relevant as they:
+1. Directly relate to systemic sclerosis
+2. Are in the correct domain (Condition)
+3. Represent different manifestations or forms of the disease
+4. Would be expected in a wide/broad ICD-10-CM concept set for systemic sclerosis
+--------------------
+
+
+STEP 4
+
+Merging results and removing dupliates...
+Done. 

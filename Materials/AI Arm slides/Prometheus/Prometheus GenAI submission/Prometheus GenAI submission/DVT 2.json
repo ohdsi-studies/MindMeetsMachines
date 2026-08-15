@@ -1,0 +1,259 @@
+{
+  "items": [
+    {
+      "concept": {
+        "CONCEPT_ID": 45605854,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of unspecified iliac vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.529",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1569354,
+        "CONCEPT_NAME": "Acute embolism and thrombosis of iliac vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.42",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45567238,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of left iliac vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.522",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1569362,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of iliac vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.52",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45605852,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of femoral vein, bilateral",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.513",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45605848,
+        "CONCEPT_NAME": "Acute embolism and thrombosis of unspecified femoral vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.419",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45605853,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of unspecified femoral vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.519",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1569353,
+        "CONCEPT_NAME": "Acute embolism and thrombosis of femoral vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.41",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1569361,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of femoral vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.51",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45601090,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of popliteal vein, bilateral",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.533",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45596255,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of unspecified popliteal vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.539",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45572141,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of left popliteal vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.532",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1569355,
+        "CONCEPT_NAME": "Acute embolism and thrombosis of popliteal vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.43",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1569363,
+        "CONCEPT_NAME": "Chronic embolism and thrombosis of popliteal vein",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "I82.53",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 1569663,
+        "CONCEPT_NAME": "Perianal venous thrombosis",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "K64.5",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "4-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    }
+  ]
+}

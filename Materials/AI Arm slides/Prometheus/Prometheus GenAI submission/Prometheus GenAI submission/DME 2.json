@@ -1,0 +1,174 @@
+{
+  "items": [
+    {
+      "concept": {
+        "CONCEPT_ID": 37200035,
+        "CONCEPT_NAME": "Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, right eye",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E08.3311",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "7-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45581342,
+        "CONCEPT_NAME": "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy with macular edema",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E08.341",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 37200043,
+        "CONCEPT_NAME": "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy with macular edema, right eye",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E08.3411",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "7-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 45533010,
+        "CONCEPT_NAME": "Diabetes mellitus due to underlying condition with unspecified diabetic retinopathy with macular edema",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E08.311",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "6-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 37200079,
+        "CONCEPT_NAME": "Diabetes mellitus due to underlying condition with diabetic macular edema, resolved following treatment",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E08.37",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 37200251,
+        "CONCEPT_NAME": "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, right eye",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E11.37X1",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "7-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 37200193,
+        "CONCEPT_NAME": "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E10.37",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 37200253,
+        "CONCEPT_NAME": "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E11.37X3",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "7-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 37200250,
+        "CONCEPT_NAME": "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E11.37",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "5-char nonbill code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_ID": 37200196,
+        "CONCEPT_NAME": "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral",
+        "STANDARD_CONCEPT": null,
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "INVALID_REASON": null,
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_CODE": "E10.37X3",
+        "DOMAIN_ID": "Condition",
+        "VOCABULARY_ID": "ICD10CM",
+        "CONCEPT_CLASS_ID": "7-char billing code"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    }
+  ]
+}
